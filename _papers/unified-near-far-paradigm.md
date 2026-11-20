@@ -16,4 +16,5 @@ conference_short: Network
 order: 70
 topics:
 - _research_topics/new-mimo.md
+- _research_topics/near-field.md
 ---

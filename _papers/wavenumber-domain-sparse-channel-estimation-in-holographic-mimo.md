@@ -14,4 +14,6 @@ bibtex: "@InProceedings{guo-ICC24,\n  author    = {Guo, Xufeng and Chen, Yuanbin
   \ MIMO;channel estimation;wavenumber domain;compressive sensing;clustered sparsity},\n}\n"
 selected: false
 order: 190
+topics:
+- _research_topics/near-field.md
 ---

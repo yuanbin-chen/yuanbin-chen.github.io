@@ -14,4 +14,6 @@ bibtex: "@InProceedings{guo-GC24,\n  author    = {Guo, Xufeng and Chen, Yuanbin 
   \ distance;wavenumber domain;ellipse fitting},\n}\n"
 selected: false
 order: 200
+topics:
+- _research_topics/near-field.md
 ---
