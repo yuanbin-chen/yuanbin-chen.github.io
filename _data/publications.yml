@@ -4,7 +4,7 @@ description: Research publications by Yuanbin Chen, grouped by authorship, with
 first_heading: First-Author Publications
 journal_heading: Journal Papers
 conference_heading: Conference Papers
-other_heading: Non-First-Author Publications
+other_heading: Co-Author Publications
 main:
   - title: Wideband Quantum Transduction for Rydberg Atomic Receivers Using Six-Wave
       Mixing
