@@ -152,16 +152,17 @@ main:
     author_role: coauthor
     doi: https://doi.org/10.1109/MNET.2025.3541316
     pdf: https://arxiv.org/pdf/2501.02730
-    bibtex: >-
-      @article{chen2025-unified-near-far-paradigm,
-        title = {{New Paradigm for Unified Near-Field and Far-Field Wireless Communications}},
-        author = {Wang, Zhaocheng and Wu, Haochen and Chen, Yuanbin and Lu, Liyang},
-        journal = {IEEE Network},
-        year = {2025},
-        volume = {39},
-        number = {6},
-        pages = {112--118},
-        doi = {10.1109/MNET.2025.3541316}
+    bibtex: >
+      @Article{wang-network,
+        author  = {Wang, Zhaocheng and Wu, Haochen and Chen, Yuanbin and Lu, Liyang},
+        journal = {IEEE Netw.},
+        title   = {New Paradigm for Unified Near-Field and Far-Field Wireless Communications},
+        year    = {2025},
+        month   = nov,
+        number  = {6},
+        pages   = {112-118},
+        volume  = {39},
+        doi     = {10.1109/MNET.2025.3541316},
       }
     selected: false
     id: unified-near-far-paradigm
@@ -191,6 +192,27 @@ main:
     conference_short: TVT
     topics:
       - near-field-mimo
+  - title: Attention-Enhanced Channel Estimation for 6G MIMO in Unifying Far-Field
+      and Near-Field
+    authors: Ziyuan Zhang, Yuanbin Chen, Ying Wang
+    conference: IEEE Transactions on Vehicular Technology
+    year: 2025
+    author_role: coauthor
+    doi: 10.1109/TVT.2025.3572700
+    bibtex: >-
+      @Article{zyz-tvt,
+        author   = {Zhang, Ziyuan and Chen, Yuanbin and Wang, Ying},
+        journal  = {IEEE Trans. Veh. Technol.},
+        title    = {Attention-Enhanced Channel Estimation for {6G MIMO} in Unifying Far-Field and Near-Field},
+        year     = {2025},
+        month    = oct,
+        number   = {10},
+        pages    = {16584-16589},
+        volume   = {74},
+        doi      = {10.1109/TVT.2025.3572700},
+        keywords = {Channel estimation;Noise;Feature extraction;Accuracy;Signal processing algorithms;Indexes;Neural networks;Estimation;Channel models;6G mobile communication;Channel estimation;deep learning;wavenumber domain;XL-MIMO;6G},
+      }
+    selected: false
   - title: "Exploiting Structured Sparsity in Near Field: From the Perspective of
       Decomposition"
     authors: Xufeng Guo, Yuanbin Chen, Ying Wang, Chau Yuen
@@ -609,26 +631,5 @@ main:
         volume   = {24},
         doi      = {10.1109/TWC.2025.3570325},
         keywords = {Channel estimation;Antennas;Radio frequency;Mutual coupling;Antenna arrays;Clustering algorithms;Probes;Feeds;Costs;Compressed sensing;Holographic MIMO;channel estimation;wavenumber domain;compressed sensing;mutual coupling},
-      }
-    selected: false
-  - title: Attention-Enhanced Channel Estimation for 6G MIMO in Unifying Far-Field
-      and Near-Field
-    authors: Ziyuan Zhang, Yuanbin Chen, Ying Wang
-    conference: IEEE Transactions on Vehicular Technology
-    year: 2025
-    author_role: coauthor
-    doi: 10.1109/TVT.2025.3572700
-    bibtex: >-
-      @Article{zyz-tvt,
-        author   = {Zhang, Ziyuan and Chen, Yuanbin and Wang, Ying},
-        journal  = {IEEE Trans. Veh. Technol.},
-        title    = {Attention-Enhanced Channel Estimation for {6G MIMO} in Unifying Far-Field and Near-Field},
-        year     = {2025},
-        month    = oct,
-        number   = {10},
-        pages    = {16584-16589},
-        volume   = {74},
-        doi      = {10.1109/TVT.2025.3572700},
-        keywords = {Channel estimation;Noise;Feature extraction;Accuracy;Signal processing algorithms;Indexes;Neural networks;Estimation;Channel models;6G mobile communication;Channel estimation;deep learning;wavenumber domain;XL-MIMO;6G},
       }
     selected: false
