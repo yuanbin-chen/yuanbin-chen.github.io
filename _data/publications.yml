@@ -213,6 +213,27 @@ main:
         keywords = {Channel estimation;Noise;Feature extraction;Accuracy;Signal processing algorithms;Indexes;Neural networks;Estimation;Channel models;6G mobile communication;Channel estimation;deep learning;wavenumber domain;XL-MIMO;6G},
       }
     selected: false
+  - title: "Fast and Robust Channel Estimation for HMIMO: A Graph-Based
+      Wavenumber-Domain Approach"
+    authors: Xufeng Guo, Yuanbin Chen, Ying Wang, Zhaocheng Wang, Zhu Han, Chau Yuen
+    conference: IEEE Transactions on Wireless Communications
+    year: 2025
+    author_role: coauthor
+    doi: 10.1109/TWC.2025.3570325
+    bibtex: >-
+      @Article{guo-twc-2025,
+        author   = {Guo, Xufeng and Chen, Yuanbin and Wang, Ying and Wang, Zhaocheng and Han, Zhu and Yuen, Chau},
+        journal  = {IEEE Trans. Wireless Commun.},
+        title    = {Fast and Robust Channel Estimation for {HMIMO}: A Graph-Based Wavenumber-Domain Approach},
+        year     = {2025},
+        month    = nov,
+        number   = {11},
+        pages    = {9001-9017},
+        volume   = {24},
+        doi      = {10.1109/TWC.2025.3570325},
+        keywords = {Channel estimation;Antennas;Radio frequency;Mutual coupling;Antenna arrays;Clustering algorithms;Probes;Feeds;Costs;Compressed sensing;Holographic MIMO;channel estimation;wavenumber domain;compressed sensing;mutual coupling},
+      }
+    selected: false
   - title: "Exploiting Structured Sparsity in Near Field: From the Perspective of
       Decomposition"
     authors: Xufeng Guo, Yuanbin Chen, Ying Wang, Chau Yuen
@@ -612,24 +633,3 @@ main:
     conference_short: TVT
     topics:
       - ris-vehicular
-  - title: "Fast and Robust Channel Estimation for HMIMO: A Graph-Based
-      Wavenumber-Domain Approach"
-    authors: Xufeng Guo, Yuanbin Chen, Ying Wang, Zhaocheng Wang, Zhu Han, Chau Yuen
-    conference: IEEE Transactions on Wireless Communications
-    year: 2025
-    author_role: coauthor
-    doi: 10.1109/TWC.2025.3570325
-    bibtex: >-
-      @Article{guo-twc-2025,
-        author   = {Guo, Xufeng and Chen, Yuanbin and Wang, Ying and Wang, Zhaocheng and Han, Zhu and Yuen, Chau},
-        journal  = {IEEE Trans. Wireless Commun.},
-        title    = {Fast and Robust Channel Estimation for {HMIMO}: A Graph-Based Wavenumber-Domain Approach},
-        year     = {2025},
-        month    = nov,
-        number   = {11},
-        pages    = {9001-9017},
-        volume   = {24},
-        doi      = {10.1109/TWC.2025.3570325},
-        keywords = {Channel estimation;Antennas;Radio frequency;Mutual coupling;Antenna arrays;Clustering algorithms;Probes;Feeds;Costs;Compressed sensing;Holographic MIMO;channel estimation;wavenumber domain;compressed sensing;mutual coupling},
-      }
-    selected: false
