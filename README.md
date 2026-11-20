@@ -11,7 +11,7 @@ Jekyll site for [yuanbin-chen.github.io](https://yuanbin-chen.github.io/), adapt
 | Form | Content | Source |
 | --- | --- | --- |
 | Profile and contact | Name, university, portrait, emails, profiles, position, and public CV PDF | `_data/profile.yml` |
-| Home | Introduction, homepage headings, and the number of news items shown | `_data/home.yml` |
+| Home | Introduction, honor below the university line, research interests, and news display | `_data/home.yml` |
 | Bio | Full biography | `_data/bio.yml` |
 | Research | Research topics, related papers, figures, and education | `_data/research.yml` |
 | Publications | Papers, author roles, links, BibTeX, and homepage selections | `_data/publications.yml` |
@@ -22,7 +22,7 @@ Jekyll site for [yuanbin-chen.github.io](https://yuanbin-chen.github.io/), adapt
 | Navigation | Top menu labels, order, and links | `_data/navigation.yml` |
 | CV reader | CV page heading and PDF section bookmarks | `_data/cv_sections.yml` |
 
-- Research topic titles also update the homepage. There is one list of news items, sorted by month. The homepage shows the latest items up to the count set in Home.
+- Edit the short research interests list in **Home** and the detailed topic sections in **Research**. There is one list of news items, sorted by month. The homepage shows the latest items up to the count set in Home.
 - In Publications, select **First author**, **Co-first author**, or **Non-first author**. Co-first papers appear in the first-author group. Enable **Show on the homepage** and add a figure and summary for a selected publication. Drag papers to change their order. Keep the link ID of an existing entry so its links continue working.
 - Use **Images** to upload a portrait or figure. Upload a public copy of the CV under **CV PDFs**, then select the file in **Profile and contact**. Set section bookmarks in **CV reader** if the PDF headings have changed.
 

@@ -60,19 +60,18 @@ html:not([data-theme="dark"]) .wrapper a:hover {
   color: var(--global-theme-color);
 }
 
-.academic-position,
-.academic-affiliation {
+.academic-profile-meta {
+  margin: 0 0 16px;
   font-size: 17px;
   line-height: 1.43;
 }
 
-.academic-position {
-  margin: 0 0 2px;
-  font-weight: 600;
+.academic-profile-meta p {
+  margin: 0;
 }
 
-.academic-affiliation {
-  margin: 2px 0 15px;
+.academic-profile-meta p + p {
+  margin-top: 3px;
 }
 
 .academic-bio {
@@ -86,6 +85,19 @@ html:not([data-theme="dark"]) .wrapper a:hover {
   margin-bottom: 0;
 }
 
+.academic-interests p {
+  margin: 0 0 5px;
+}
+
+.academic-interests ul {
+  margin: 0;
+  padding-inline-start: 1.2em;
+}
+
+.academic-interests li + li {
+  margin-top: 3px;
+}
+
 .academic-profile-links,
 .publication-profiles {
   display: flex;
@@ -95,9 +107,11 @@ html:not([data-theme="dark"]) .wrapper a:hover {
   font-weight: 600;
 }
 
-.academic-email-links {
-  margin-top: 4px;
-  font-weight: 400;
+.academic-profile-links {
+  align-items: baseline;
+}
+
+.academic-profile-links a[href^="mailto:"] {
   overflow-wrap: anywhere;
 }
 

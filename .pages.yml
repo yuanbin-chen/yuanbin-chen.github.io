@@ -80,11 +80,31 @@ content:
     required: true
     options:
       format: markdown
-  - name: interests_intro
-    label: Research interest lead-in
+  - name: distinction
+    label: Honor below the university line
     type: string
-    description: Edit the linked topics in the Research form.
+  - name: interests_intro
+    label: Research interests heading
+    type: string
     required: true
+  - name: research_interests
+    label: Homepage research interests
+    type: object
+    list:
+      collapsible:
+        collapsed: true
+        summary: '{fields.title}'
+    fields:
+    - name: title
+      label: Interest
+      type: string
+      required: true
+    - name: detail
+      label: Details in parentheses
+      type: string
+    - name: url
+      label: Link URL
+      type: string
   - name: news_heading
     label: News heading
     type: string
@@ -143,7 +163,6 @@ content:
   - name: topics
     label: Research topics
     type: object
-    description: These topics also appear under research interests on the homepage.
     list:
       collapsible:
         collapsed: true
