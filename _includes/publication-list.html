@@ -1,9 +1,19 @@
+{% assign prioritized_papers = '' | split: ',' %}
+{% assign default_papers = '' | split: ',' %}
+{% for paper in include.papers %}
+  {% if paper.display_order and paper.display_order != '' %}
+    {% assign prioritized_papers = prioritized_papers | push: paper %}
+  {% else %}
+    {% assign default_papers = default_papers | push: paper %}
+  {% endif %}
+{% endfor %}
+{% assign displayed_papers = prioritized_papers | sort: 'display_order' | concat: default_papers %}
 {% if include.numbered %}
 <ol class="bibliography numbered-bibliography{% if include.number_prefix %} prefixed-bibliography{% endif %}"{% if include.number_prefix %} reversed{% endif %} role="list">
 {% else %}
 <ul class="bibliography" role="list">
 {% endif %}
-{% for paper in include.papers %}
+{% for paper in displayed_papers %}
   {% assign paper_link = paper.doi | default: paper.page %}
   {% assign paper_id = paper.relative_path | split: '/' | last | remove: '.md' %}
   <li id="{{ paper_id | escape }}"{% if include.number_prefix %} value="{{ forloop.rindex }}" data-publication-number="{{ include.number_prefix }}{{ forloop.rindex }}"{% elsif include.numbered %} value="{{ forloop.index }}"{% endif %}{% if include.featured and paper.image and paper.image != '' %} class="featured-publication"{% endif %} data-publication data-author-role="{{ paper.author_role | escape }}">
@@ -49,17 +59,6 @@
         {% endif %}
         {% if paper.others and paper.others != '' %}{{ paper.others | escape }}{% endif %}
       </div>
-      {% if include.numbered and paper.topics.size > 0 %}
-        <div class="publication-research-topics" role="group" aria-label="Research topics">
-          {% for topic_path in paper.topics %}
-          {% assign topic = site.research_topics | where: 'relative_path', topic_path | first %}
-          {% if topic %}
-          {% assign topic_id = topic_path | split: '/' | last | remove: '.md' %}
-          <a href="{{ '/research/#' | append: topic_id | relative_url | escape }}">{{ topic.title | escape }}</a>
-          {% endif %}
-          {% endfor %}
-        </div>
-      {% endif %}
       {% if include.featured and paper.summary and paper.summary != '' %}
         <p class="publication-summary">{{ paper.summary | escape }}</p>
       {% endif %}

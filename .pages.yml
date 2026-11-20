@@ -240,143 +240,256 @@ content:
   label: Publications
   type: group
   items:
-  - name: papers
+  - name: paper_lists
     label: Papers
-    type: collection
-    path: _papers
-    filename:
-      template: '{primary}.md'
-      field: create
-    format: yaml-frontmatter
-    subfolders: false
-    operations:
-      rename: false
-    view:
-      primary: title
-      fields:
-      - title
-      - year
-      - conference
-      sort:
-      - year
-      - title
-      search:
-      - title
-      - authors
-      - conference
-      - year
-      default:
-        sort: year
-        order: desc
-    fields:
-    - name: title
-      label: Paper title
-      type: string
-      required: true
-    - name: reference_note
-      label: Reference label note
-      type: string
-      hidden: true
-    - name: authors
-      label: Authors
-      type: string
-      description: Enter author names in publication order, separated by commas.
-      required: true
-    - name: conference
-      label: Journal or conference
-      type: string
-      required: true
-    - name: year
-      label: Publication year
-      type: number
-      required: true
-      options:
-        step: 1
-    - name: author_role
-      label: Your author role
-      type: select
-      required: true
-      options:
-        values:
-        - value: first
-          label: First author
-        - value: co-first
-          label: Co-first author
-        - value: coauthor
-          label: Non-first author
-    - name: publication_type
-      label: Publication type
-      type: select
-      required: true
-      options:
-        values:
-        - value: journal
-          label: Journal paper
-        - value: conference
-          label: Conference paper
-    - name: topics
-      label: Research topics
-      type: reference
-      description: Search and select one or more entries. Linked entries are updated after the site workflow
-        runs.
-      options:
-        collection: research_topics
-        multiple: true
-        search: title
-        value: '{path}'
-        label: '{title}'
-    - name: doi
-      label: Paper link (DOI or publisher URL)
-      type: string
-    - name: pdf
-      label: arXiv PDF URL
-      type: string
-    - name: code
-      label: Code URL
-      type: string
-    - name: page
-      label: Project page URL
-      type: string
-    - name: data
-      label: Dataset URL
-      type: string
-    - name: bibtex
-      label: BibTeX citation
-      type: text
-      description: Paste the BibTeX entry to enable copying and downloading it.
-    - name: notes
-      label: Publication note
-      type: string
-    - name: others
-      label: Additional publication note
-      type: string
-    - name: selected
-      label: Show on the homepage
-      type: boolean
-      default: false
-    - name: image
-      label: Homepage figure
-      type: image
-      options:
-        media: images
-    - name: image_alt
-      label: Homepage figure description for screen readers
-      type: string
-    - name: summary
-      label: Homepage summary
-      type: text
-    - name: conference_short
-      label: Venue abbreviation
-      type: string
-    - name: scholar_id
-      label: Google Scholar article ID
-      type: string
-    - name: order
-      label: Display order
-      type: number
-      description: Optional. Smaller numbers appear first within the same year for first-author papers, and
-        in list order elsewhere.
-      options: *id001
+    type: group
+    items:
+    - name: papers
+      label: All Papers (33)
+      type: collection
+      path: _papers
+      filename: &papers_filename
+        template: '{primary}.md'
+        field: create
+      format: yaml-frontmatter
+      subfolders: false
+      operations: &papers_operations
+        rename: false
+      view: &papers_view
+        primary: title
+        fields:
+        - title
+        - year
+        - conference
+        - display_order
+        sort:
+        - year
+        - title
+        - display_order
+        search:
+        - title
+        - authors
+        - conference
+        - year
+        default:
+          sort: year
+          order: desc
+      fields: &papers_fields
+      - name: title
+        label: Paper title
+        type: string
+        required: true
+      - name: reference_note
+        label: Reference label note
+        type: string
+        hidden: true
+      - name: authors
+        label: Authors
+        type: string
+        description: Enter author names in publication order, separated by commas.
+        required: true
+      - name: conference
+        label: Journal or conference
+        type: string
+        required: true
+      - name: year
+        label: Publication year
+        type: number
+        required: true
+        options:
+          step: 1
+      - name: author_role
+        label: Your author role
+        type: select
+        required: true
+        options:
+          values:
+          - value: first
+            label: First author
+          - value: co-first
+            label: Co-first author
+          - value: coauthor
+            label: Non-first author
+      - name: publication_type
+        label: Publication type
+        type: select
+        required: true
+        options:
+          values:
+          - value: journal
+            label: Journal paper
+          - value: conference
+            label: Conference paper
+      - name: display_order
+        label: Display order
+        type: number
+        description: Lower numbers appear first, within this publication category and among selected papers on the homepage. Leave blank to keep the default order.
+        options:
+          min: 0
+          step: 1
+      - name: topics
+        label: Research topics
+        type: reference
+        description: Search and select one or more entries. Linked entries are updated after the site workflow
+          runs.
+        options:
+          collection: research_topics
+          multiple: true
+          search: title
+          value: '{path}'
+          label: '{title}'
+      - name: doi
+        label: Paper link (DOI or publisher URL)
+        type: string
+      - name: pdf
+        label: arXiv PDF URL
+        type: string
+      - name: code
+        label: Code URL
+        type: string
+      - name: page
+        label: Project page URL
+        type: string
+      - name: data
+        label: Dataset URL
+        type: string
+      - name: bibtex
+        label: BibTeX citation
+        type: text
+        description: Paste the BibTeX entry to enable copying and downloading it.
+      - name: notes
+        label: Publication note
+        type: string
+      - name: others
+        label: Additional publication note
+        type: string
+      - name: selected
+        label: Show on the homepage
+        type: boolean
+        default: false
+      - name: image
+        label: Homepage figure
+        type: image
+        options:
+          media: images
+      - name: image_alt
+        label: Homepage figure description for screen readers
+        type: string
+      - name: summary
+        label: Homepage summary
+        type: text
+      - name: conference_short
+        label: Venue abbreviation
+        type: string
+      - name: scholar_id
+        label: Google Scholar article ID
+        type: string
+      - name: order
+        label: Default display order
+        type: number
+        hidden: true
+        options: *id001
+    # BEGIN GENERATED PAPER VIEWS
+    - name: first_author_journals
+      label: First-Author Journals (15)
+      type: collection
+      path: _papers
+      filename: *papers_filename
+      format: yaml-frontmatter
+      subfolders: false
+      operations: *papers_operations
+      view: *papers_view
+      fields: *papers_fields
+      exclude:
+      - attention-enhanced-channel-estimation-for-6g-mimo-in-unifying-far-field-and-near-field.md
+      - codebook-design-for-holographic-mimo-near-field-prospects-and-road-to-standardization.md
+      - exploiting-structured-sparsity-in-near-field-from-the-perspective-of-decomposition.md
+      - fast-and-robust-channel-estimation-for-hmimo-a-graph-based-wavenumber-domain-approach.md
+      - holographic-channel-clustered-sparsity.md
+      - learning-based-joint-beamforming-and-antenna-movement-design-for-movable-antenna-systems.md
+      - metasurface-router-for-near-field-multi-user-low-interference-access-driven-by-structured-wave.md
+      - near-field-sparse-channel-estimation-for-extremely-large-scale-ris-aided-wireless-communications.md
+      - near-field-triple-parametric-estimation.md
+      - reconfigurable-intelligent-surface-deployment-for-blind-zone-improvement-in-mmwave-wireless-networks.md
+      - ris-electromagnetic-joint-model.md
+      - ris-uav-secure-transmission.md
+      - ris-wireless-beacon-estimation.md
+      - two-timescale-beamforming-optimization-for-downlink-multi-user-holographic-mimo-surfaces.md
+      - uav-trajectory-resource-allocation.md
+      - unified-near-far-paradigm.md
+      - wavenumber-domain-near-field-channel-estimation-beyond-the-fresnel-bound.md
+      - wavenumber-domain-sparse-channel-estimation-in-holographic-mimo.md
+    - name: first_author_conferences
+      label: First-Author Conferences (4)
+      type: collection
+      path: _papers
+      filename: *papers_filename
+      format: yaml-frontmatter
+      subfolders: false
+      operations: *papers_operations
+      view: *papers_view
+      fields: *papers_fields
+      exclude:
+      - active-ris-robust-beamforming.md
+      - angular-distance-estimation.md
+      - attention-enhanced-channel-estimation-for-6g-mimo-in-unifying-far-field-and-near-field.md
+      - exploiting-structured-sparsity-in-near-field-from-the-perspective-of-decomposition.md
+      - fast-and-robust-channel-estimation-for-hmimo-a-graph-based-wavenumber-domain-approach.md
+      - harnessing-rydberg-receivers.md
+      - high-mobility-millimeter-wave.md
+      - holographic-channel-clustered-sparsity.md
+      - holographic-mimo-systems.md
+      - learning-based-joint-beamforming-and-antenna-movement-design-for-movable-antenna-systems.md
+      - metasurface-router-for-near-field-multi-user-low-interference-access-driven-by-structured-wave.md
+      - near-field-triple-parametric-estimation.md
+      - network-slicing-vehicular.md
+      - polarization-aware-doa.md
+      - qos-driven-spectrum-sharing.md
+      - reconfigurable-intelligent-surface-deployment-for-blind-zone-improvement-in-mmwave-wireless-networks.md
+      - ris-electromagnetic-joint-model.md
+      - ris-resource-allocation.md
+      - ris-uav-secure-transmission.md
+      - ris-vehicle-platoons.md
+      - ris-vehicular-networks.md
+      - ris-wireless-beacon-estimation.md
+      - robust-transmission-statistical-csi.md
+      - two-timescale-beamforming-optimization-for-downlink-multi-user-holographic-mimo-surfaces.md
+      - uav-trajectory-resource-allocation.md
+      - unified-holographic-mimo.md
+      - unified-near-far-paradigm.md
+      - unifying-far-near-field.md
+      - wideband-quantum-transduction.md
+    - name: coauthor_papers
+      label: Co-Author Papers (14)
+      type: collection
+      path: _papers
+      filename: *papers_filename
+      format: yaml-frontmatter
+      subfolders: false
+      operations: *papers_operations
+      view: *papers_view
+      fields: *papers_fields
+      exclude:
+      - active-ris-robust-beamforming.md
+      - angular-distance-estimation.md
+      - codebook-design-for-holographic-mimo-near-field-prospects-and-road-to-standardization.md
+      - harnessing-rydberg-receivers.md
+      - high-mobility-millimeter-wave.md
+      - holographic-mimo-systems.md
+      - near-field-sparse-channel-estimation-for-extremely-large-scale-ris-aided-wireless-communications.md
+      - network-slicing-vehicular.md
+      - polarization-aware-doa.md
+      - qos-driven-spectrum-sharing.md
+      - ris-resource-allocation.md
+      - ris-vehicle-platoons.md
+      - ris-vehicular-networks.md
+      - robust-transmission-statistical-csi.md
+      - unified-holographic-mimo.md
+      - unifying-far-near-field.md
+      - wavenumber-domain-near-field-channel-estimation-beyond-the-fresnel-bound.md
+      - wavenumber-domain-sparse-channel-estimation-in-holographic-mimo.md
+      - wideband-quantum-transduction.md
+    # END GENERATED PAPER VIEWS
   - name: publications_page
     label: Page settings
     type: file

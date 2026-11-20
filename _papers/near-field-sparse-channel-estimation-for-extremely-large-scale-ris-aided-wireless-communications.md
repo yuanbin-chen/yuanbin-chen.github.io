@@ -15,5 +15,4 @@ bibtex: "@InProceedings{tang-GC,\n  author    = {Tang, Zixing and Chen, Yuanbin,
 notes: Best Workshop Paper Award
 selected: false
 order: 260
-reference_note: ' · Duplicate entry'
 ---
