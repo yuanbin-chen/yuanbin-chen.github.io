@@ -2,7 +2,7 @@ heading: Professional Services
 description: Editorial roles, workshop and tutorial organization, and technical
   program committees.
 sections:
-  - title: Editorial service
+  - title: Editorial Service
     id: editorial-service
     body: |+
       ### Lead Guest Editor
@@ -11,7 +11,7 @@ sections:
       - **IEEE Communications Magazine**. [The Upper Mid-Band (FR3) for 6G: Technologies, Systems, and Deployment](https://www.comsoc.org/publications/magazines/ieee-communications-magazine/cfp/upper-mid-band-fr3-6g-technologies-systems-and-deployment).
       - **Space: Science & Technology**. [Atomic-to-Space: Quantum Sensors for Spaceborne Communications and Sensing](https://spj.science.org/page/space/si/atomic-to-space).
 
-  - title: Conference service
+  - title: Conference Service
     id: conference-service
     body: >+
       ### Workshop Chair
