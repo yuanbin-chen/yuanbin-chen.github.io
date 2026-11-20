@@ -1,14 +1,8 @@
-{% if site.analytics.provider and page.analytics != false %}
-
-{% case site.analytics.provider %}
-{% when "google" %}
-  {% include /analytics-providers/google.html %}
-{% when "google-universal" %}
-  {% include /analytics-providers/google-universal.html %}
-{% when "google-analytics-4" %}
-  {% include /analytics-providers/google-analytics-4.html %}
-{% when "custom" %}
-  {% include /analytics-providers/custom.html %}
-{% endcase %}
-
+{% assign goatcounter_code = site.analytics.goatcounter_code | default: '' | strip %}
+{% if goatcounter_code != '' %}
+<!-- Analytics is opt-in: configure your own GoatCounter site code. -->
+<script>
+  window.goatcounter = { path: window.location.pathname || "/" };
+</script>
+<script data-goatcounter="https://{{ goatcounter_code | escape }}.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 {% endif %}

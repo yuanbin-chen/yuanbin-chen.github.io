@@ -1,0 +1,18 @@
+{% assign news_limit = include.limit | default: site.data.news.size %}
+<ul class="news-updates">
+  {% for item in site.data.news limit: news_limit %}
+    <li class="news-entry">
+      <time datetime="{{ item.month | escape }}">{{ item.month | append: '-01' | date: "%b %Y" }}</time>
+      <div class="news-entry-content">
+        <p class="news-entry-title">{{ item.title | escape }}</p>
+        {% if item.description or item.deadline or item.url %}
+          <p class="news-entry-detail">
+            {{ item.description | escape }}
+            {% if item.deadline %}<span class="news-deadline">Submission deadline {{ item.deadline | escape }}.</span>{% endif %}
+            {% if item.url %}<a href="{{ item.url | escape }}">{{ item.link_label | default: 'Details' | escape }}</a>{% endif %}
+          </p>
+        {% endif %}
+      </div>
+    </li>
+  {% endfor %}
+</ul>

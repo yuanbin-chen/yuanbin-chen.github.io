@@ -1,0 +1,9 @@
+- id: quantum-rf
+  label: Quantum RF sensing
+  name: Rydberg atomic receivers, quantum sensing and RF-to-optical transduction
+- id: near-field-mimo
+  label: Near-field MIMO
+  name: Near-field wireless communications and holographic MIMO
+- id: ris-vehicular
+  label: RIS and vehicular networks
+  name: Reconfigurable intelligent surfaces and vehicular communications
