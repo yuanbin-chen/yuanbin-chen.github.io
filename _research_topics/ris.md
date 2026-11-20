@@ -1,10 +1,9 @@
 ---
 title: Reconfigurable Intelligent Surfaces (RIS)
-overview: I study RIS-assisted propagation and channel estimation, as well as robust beamforming and resource allocation
-  when the channel is uncertain or the terminals are moving rapidly.
+overview: I study RIS-assisted propagation and channel estimation, as well as robust beamforming and resource
+  allocation when the channel is uncertain or the terminals are moving rapidly.
 order: 40
 related_papers:
-- _papers/extremely-large-ris-estimation.md
 - _papers/active-ris-robust-beamforming.md
 - _papers/ris-electromagnetic-joint-model.md
 - _papers/ris-vehicle-platoons.md

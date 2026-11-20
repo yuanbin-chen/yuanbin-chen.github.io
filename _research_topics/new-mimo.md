@@ -16,6 +16,5 @@ related_papers:
 - _papers/unifying-far-near-field.md
 - _papers/holographic-mimo-systems.md
 - _papers/learning-based-joint-beamforming-and-antenna-movement-design-for-movable-antenna-systems.md
-- _papers/extremely-large-ris-estimation.md
 - _papers/near-field-triple-parametric-estimation.md
 ---
