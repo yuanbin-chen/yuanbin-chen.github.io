@@ -120,6 +120,28 @@ main:
     conference_short: JSTEAP
     topics:
       - ris
+  - title: Metasurface Router for Near-Field Multi-User Low-Interference Access
+      Driven by Structured Wave
+    authors: Yufei Zhao, Qihao Lv, Yuanbin Chen, Afkar Mohamed Ismail, Yong Liang
+      Guan, and Chau Yuen
+    conference: IEEE Transactions on Vehicular Technology
+    year: 2026
+    author_role: coauthor
+    publication_type: journal
+    doi: 10.1109/TVT.2026.3728032
+    bibtex: >
+      @Article{zhaoyufei-2026,
+        author   = {Zhao, Yufei and Lv, Qihao and Chen, Yuanbin and Ismail, Afkar Mohamed and Guan, Yong Liang and Yuen, Chau},
+        journal  = {IEEE Trans. Veh. Technol.},
+        title    = {Metasurface Router for Near-Field Multi-User Low-Interference Access Driven by Structured Wave},
+        year     = {2026},
+        month    = nov,
+        number   = {11},
+        pages    = {29084-29089},
+        volume   = {75},
+        doi      = {10.1109/TVT.2026.3728032},
+      }
+    selected: false
   - title: "Unified Far-Field and Near-Field in Holographic MIMO: A
       Wavenumber-Domain Perspective"
     authors: Yuanbin Chen, Xufeng Guo, Gui Zhou, Shi Jin, Derrick Wing Kwan Ng,
@@ -292,6 +314,28 @@ main:
     selected: false
     topics:
       - near-field-mimo
+  - title: "Exploiting Structured Sparsity in Near Field: From the Perspective of
+      Decomposition"
+    authors: Xufeng Guo, Yuanbin Chen, Ying Wang, Chau Yuen
+    conference: IEEE Communications Magazine
+    year: 2025
+    author_role: coauthor
+    publication_type: journal
+    doi: 10.1109/MCOM.001.2300836
+    bibtex: >
+      @Article{guo-cm,
+        author   = {Guo, Xufeng and Chen, Yuanbin and Wang, Ying and Yuen, Chau},
+        journal  = {IEEE Commun. Mag.},
+        title    = {Exploiting Structured Sparsity in Near Field: From the Perspective of Decomposition},
+        year     = {2025},
+        month    = jan,
+        number   = {1},
+        pages    = {37-43},
+        volume   = {63},
+        doi      = {10.1109/MCOM.001.2300836},
+        keywords = {Three-dimensional displays;Complexity theory;Near field communication;Telecommunication network management;Channel estimation;Wireless sensor networks;Linear antenna arrays;6G mobile communication;Switching circuits;Spectral efficiency;Space division multiplexing;MIMO},
+      }
+    selected: false
   - title: Unifying Far-Field and Near-Field Wireless Communications in 6G MIMO
     authors: Yuanbin Chen, Xufeng Guo, Zhaocheng Wang, Chau Yuen
     conference: IEEE Wireless Communications Letters
@@ -813,48 +857,3 @@ main:
     conference_short: TVT
     topics:
       - ris-vehicular
-  - title: Electromagnetic-Communication Joint Modeling and Application for
-      RIS-Assisted Wireless Systems
-    authors: Xiaocun Zong, Yuanbin Chen, Fan Yang, Zhaocheng Wang, Zhijun Zhang,
-      Shenheng Xu, Maokun Li
-    conference: IEEE Journal of Selected Topics in Electromagnetics, Antennas and
-      Propagation
-    year: 2026
-    author_role: coauthor
-    publication_type: journal
-    doi: 10.1109/JSTEAP.2026.3721014
-    bibtex: >-
-      @Article{zong-2026,
-        author   = {Zong, Xiaocun and Chen, Yuanbin and Yang, Fan and Wang, Zhaocheng and Zhang, Zhijun and Xu, Shenheng and Li, Maokun},
-        journal  = {IEEE Journal of Selected Topics in Electromagnetics, Antennas and Propagation},
-        title    = {Electromagnetic-Communication Joint Modeling and Application for {RIS}-Assisted Wireless Systems},
-        year     = {2026},
-        month    = aug,
-        pages    = {462-476},
-        volume   = {2},
-        doi      = {10.1109/JSTEAP.2026.3721014},
-        keywords = {Modeling;Reconfigurable intelligent surfaces;Antennas;Wireless communication;Arrays;Delays;Apertures;Symbols;Bit error rate;Baseband;Aperture transit time;bit error rate (BER);joint modeling;reconfigurable intelligent surface (RIS);wireless communications},
-      }
-    selected: false
-  - title: Metasurface Router for Near-Field Multi-User Low-Interference Access
-      Driven by Structured Wave
-    authors: Yufei Zhao, Qihao Lv, Yuanbin Chen, Afkar Mohamed Ismail, Yong Liang
-      Guan, and Chau Yuen
-    conference: IEEE Transactions on Vehicular Technology
-    year: 2026
-    author_role: coauthor
-    publication_type: journal
-    doi: 10.1109/TVT.2026.3728032
-    bibtex: >
-      @Article{zhaoyufei-2026,
-        author   = {Zhao, Yufei and Lv, Qihao and Chen, Yuanbin and Ismail, Afkar Mohamed and Guan, Yong Liang and Yuen, Chau},
-        journal  = {IEEE Trans. Veh. Technol.},
-        title    = {Metasurface Router for Near-Field Multi-User Low-Interference Access Driven by Structured Wave},
-        year     = {2026},
-        month    = nov,
-        number   = {11},
-        pages    = {29084-29089},
-        volume   = {75},
-        doi      = {10.1109/TVT.2026.3728032},
-      }
-    selected: false
