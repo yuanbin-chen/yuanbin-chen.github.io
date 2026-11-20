@@ -417,7 +417,7 @@ main:
       - movable-antenna
   - title: Wavenumber Domain Sparse Channel Estimation in Holographic MIMO
     authors: Xufeng Guo, Yuanbin Chen, Ying Wang, Zhaocheng Wang, Zhu Han
-    conference: Proc. of IEEE Globecom
+    conference: Proc. of IEEE ICC
     year: 2024
     author_role: co-first
     publication_type: conference
@@ -795,3 +795,21 @@ main:
     conference_short: TVT
     topics:
       - ris-vehicular
+  - title: "Wavenumber-Domain Near-Field Channel Estimation: Beyond the Fresnel Bound"
+    authors: Xufeng Guo, Yuanbin Chen, Ying Wang, Zhaocheng Wang, Chau Yuen
+    conference: Proc. of IEEE Globecom
+    year: 2024
+    author_role: co-first
+    publication_type: conference
+    doi: 10.1109/GLOBECOM52923.2024.10901393
+    bibtex: >
+      @InProceedings{guo-GC24,
+        author    = {Guo, Xufeng and Chen, Yuanbin and Wang, Ying and Wang, Zhaocheng and Yuen, Chau},
+        booktitle = {Proc. of IEEE Globecom},
+        title     = {Wavenumber-Domain Near-Field Channel Estimation: Beyond the Fresnel Bound},
+        year      = {2024},
+        pages     = {4660-4665},
+        doi       = {10.1109/GLOBECOM52923.2024.10901393},
+        keywords  = {Geometry;Lower bound;Closed-form solutions;Simulation;Fitting;Channel estimation;Estimation;Benchmark testing;Robustness;Global communication;Near field;channel estimation;Fresnel distance;wavenumber domain;ellipse fitting},
+      }
+    selected: false
