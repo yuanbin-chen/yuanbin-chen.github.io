@@ -35,6 +35,7 @@ topics:
       how near- and far-field propagation can be represented in a common
       wavenumber domain, and how that representation informs channel models and
       transmission design across link distances.
+    image: /assets/img/holographic-wavenumber.webp
     related_papers:
       - label: Unifying Far-Field and Near-Field Wireless Communications in 6G MIMO
         url: /publications/#unifying-far-near-field
@@ -44,7 +45,6 @@ topics:
       wavenumber, angle, and distance information to recover the channel. One
       focus is how to model structure in the channel and exploit it to reduce
       estimation overhead.
-    image: /assets/img/holographic-wavenumber.webp
     image_alt: Diagrams comparing electromagnetic fields with different wavenumbers
     caption: Electromagnetic fields characterized by different wavenumbers. [Chen et
       al., IEEE Communications Magazine
