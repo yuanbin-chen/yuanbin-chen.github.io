@@ -270,6 +270,28 @@ main:
     conference_short: ComMag
     topics:
       - near-field-mimo
+  - title: "Codebook Design for Holographic MIMO: Near-Field Prospects and Road to
+      Standardization"
+    authors: Yuanbin Chen, Dongxuan He, Siyu Li, Tianqi Mao
+    conference: International Wireless Communications and Mobile Computing (IWCMC)
+    year: 2025
+    author_role: first
+    publication_type: conference
+    doi: 10.1109/IWCMC65282.2025.11059433
+    bibtex: >
+      @InProceedings{chen-IWCMC25,
+        author    = {Chen, Yuanbin and He, Dongxuan and Li, Shunyu and Mao, Tianqi},
+        booktitle = {Proc. of IEEE IWCMC},
+        title     = {Codebook Design for Holographic MIMO: Near-Field Prospects and Road to Standardization},
+        year      = {2025},
+        pages     = {1084-1090},
+        doi       = {10.1109/IWCMC65282.2025.11059433},
+        keywords  = {Training;Roads;Millimeter wave technology;3GPP;Proposals;Artificial intelligence;Standards;Antennas;Signal resolution;Mobile computing;Holographic MIMO;6G;near-field communications;codebook design;standardization},
+      }
+    notes: Best Paper Award
+    selected: false
+    topics:
+      - near-field-mimo
   - title: Unifying Far-Field and Near-Field Wireless Communications in 6G MIMO
     authors: Yuanbin Chen, Xufeng Guo, Zhaocheng Wang, Chau Yuen
     conference: IEEE Wireless Communications Letters
@@ -393,6 +415,26 @@ main:
     selected: false
     topics:
       - movable-antenna
+  - title: Wavenumber Domain Sparse Channel Estimation in Holographic MIMO
+    authors: Xufeng Guo, Yuanbin Chen, Ying Wang, Zhaocheng Wang, Zhu Han
+    conference: Proc. of IEEE Globecom
+    year: 2024
+    author_role: co-first
+    publication_type: conference
+    doi: 10.1109/ICC51166.2024.10622578
+    bibtex: >
+      @InProceedings{guo-ICC24,
+        author    = {Guo, Xufeng and Chen, Yuanbin and Wang, Ying and Wang, Zhaocheng and Han, Zhu},
+        booktitle = {Proc. of IEEE Globecom},
+        title     = {Wavenumber Domain Sparse Channel Estimation in Holographic {MIMO}},
+        year      = {2024},
+        address   = {Denver, CO, USA},
+        month     = jun,
+        pages     = {3078-3084},
+        doi       = {10.1109/ICC51166.2024.10622578},
+        keywords  = {Computational modeling;Simulation;Channel estimation;Clustering algorithms;Power system harmonics;Reflector antennas;Sensors;Holographic MIMO;channel estimation;wavenumber domain;compressive sensing;clustered sparsity},
+      }
+    selected: false
   - title: "Location Tracking for Reconfigurable Intelligent Surfaces Aided Vehicle
       Platoons: Diverse Sparsities Inspired Approaches"
     authors: Yuanbin Chen, Y. Wang, X. Guo, Z. Han, P. Zhang
@@ -513,6 +555,29 @@ main:
     conference_short: TCOM
     topics:
       - ris-vehicular
+  - title: Near-Field Sparse Channel Estimation for Extremely Large-Scale RIS-Aided
+      Wireless Communications
+    authors: Zixing Tang, Yuanbin Chen, Ying Wang, Tainqi Mao, Qingqing Wu, Marco Di
+      Renzo, Lajos Hanzo
+    conference: Proc. of IEEE GCWorkshops
+    year: 2023
+    author_role: co-first
+    publication_type: conference
+    doi: 10.1109/GCWkshps58843.2023.10464973
+    bibtex: >
+      @InProceedings{tang-GC,
+        author    = {Tang, Zixing and Chen, Yuanbin, and Wang Ying, and Mao, Tainqi and Wu, Qingqing and Renzo, Marco Di, and Hanzo, Lajos},
+        booktitle = {Proc. of IEEE GCWorkshops},
+        title     = {Near-Field Sparse Channel Estimation for Extremely Large-Scale RIS-Aided Wireless Communications},
+        year      = {2023},
+        address   = {Kuala Lumpur, Malaysia},
+        month     = dec,
+        note      = {Available online: \url{https://arxiv.org/abs/2311.07249}},
+        pages     = {1373-1379},
+        doi       = {10.1109/GCWkshps58843.2023.10464973},
+      }
+    notes: Best Workshop Paper Award
+    selected: false
   - title: Robust Beamforming for Active Reconfigurable Intelligent Omni-Surface in
       Vehicular Communications
     authors: Yuanbin Chen, Y. Wang, Z. Wang, P. Zhang
@@ -730,48 +795,3 @@ main:
     conference_short: TVT
     topics:
       - ris-vehicular
-  - title: "Codebook Design for Holographic MIMO: Near-Field Prospects and Road to
-      Standardization"
-    authors: Yuanbin Chen, Dongxuan He, Siyu Li, Tianqi Mao
-    conference: International Wireless Communications and Mobile Computing (IWCMC)
-    year: 2025
-    author_role: first
-    publication_type: conference
-    doi: 10.1109/IWCMC65282.2025.11059433
-    bibtex: >
-      @InProceedings{chen-IWCMC25,
-        author    = {Chen, Yuanbin and He, Dongxuan and Li, Shunyu and Mao, Tianqi},
-        booktitle = {Proc. of IEEE IWCMC},
-        title     = {Codebook Design for Holographic MIMO: Near-Field Prospects and Road to Standardization},
-        year      = {2025},
-        pages     = {1084-1090},
-        doi       = {10.1109/IWCMC65282.2025.11059433},
-        keywords  = {Training;Roads;Millimeter wave technology;3GPP;Proposals;Artificial intelligence;Standards;Antennas;Signal resolution;Mobile computing;Holographic MIMO;6G;near-field communications;codebook design;standardization},
-      }
-    notes: Best Paper Award
-    selected: false
-    topics:
-      - near-field-mimo
-  - title: Near-Field Sparse Channel Estimation for Extremely Large-Scale RIS-Aided
-      Wireless Communications
-    authors: Zixing Tang, Yuanbin Chen, Ying Wang, Tainqi Mao, Qingqing Wu, Marco Di
-      Renzo, Lajos Hanzo
-    conference: Proc. of IEEE GCWorkshops
-    year: 2023
-    author_role: co-first
-    publication_type: conference
-    doi: 10.1109/GCWkshps58843.2023.10464973
-    bibtex: >
-      @InProceedings{tang-GC,
-        author    = {Tang, Zixing and Chen, Yuanbin, and Wang Ying, and Mao, Tainqi and Wu, Qingqing and Renzo, Marco Di, and Hanzo, Lajos},
-        booktitle = {Proc. of IEEE GCWorkshops},
-        title     = {Near-Field Sparse Channel Estimation for Extremely Large-Scale RIS-Aided Wireless Communications},
-        year      = {2023},
-        address   = {Kuala Lumpur, Malaysia},
-        month     = dec,
-        note      = {Available online: \url{https://arxiv.org/abs/2311.07249}},
-        pages     = {1373-1379},
-        doi       = {10.1109/GCWkshps58843.2023.10464973},
-      }
-    notes: Best Workshop Paper Award
-    selected: false
