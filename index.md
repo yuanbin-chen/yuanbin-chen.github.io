@@ -11,7 +11,7 @@ seo_title: Yuanbin Chen | Nanyang Technological University
     <p class="academic-bio">
       I am a Postdoctoral Research Fellow at School of Electrical and Electronic Engineering (EEE), Nanyang Technological University (NTU), Singapore, supervised by
       <a href="https://blogs.ntu.edu.sg/chau-yuen/">Prof. Chau Yuen</a>.
-      I received the B.S. degree in Communications Engineering from Beijing Jiaotong University, Beijing, China, in 2019, and the Ph.D. degree in Information and Communication Systems from Beijing University of Posts and Telecommunications (BUPT), Beijing, China, in 2024. I graduated with honors from both institutions.
+      I received the B.S. degree from Beijing Jiaotong University, Beijing, China, in 2019, and the Ph.D. degree from Beijing University of Posts and Telecommunications (BUPT), Beijing, China, in 2024. I graduated with honors from both institutions.
     </p>
     <p class="academic-bio">
       My research interests include
