@@ -836,3 +836,25 @@ main:
         keywords = {Modeling;Reconfigurable intelligent surfaces;Antennas;Wireless communication;Arrays;Delays;Apertures;Symbols;Bit error rate;Baseband;Aperture transit time;bit error rate (BER);joint modeling;reconfigurable intelligent surface (RIS);wireless communications},
       }
     selected: false
+  - title: Metasurface Router for Near-Field Multi-User Low-Interference Access
+      Driven by Structured Wave
+    authors: Yufei Zhao, Qihao Lv, Yuanbin Chen, Afkar Mohamed Ismail, Yong Liang
+      Guan, and Chau Yuen
+    conference: IEEE Transactions on Vehicular Technology
+    year: 2026
+    author_role: coauthor
+    publication_type: journal
+    doi: 10.1109/TVT.2026.3728032
+    bibtex: >
+      @Article{zhaoyufei-2026,
+        author   = {Zhao, Yufei and Lv, Qihao and Chen, Yuanbin and Ismail, Afkar Mohamed and Guan, Yong Liang and Yuen, Chau},
+        journal  = {IEEE Trans. Veh. Technol.},
+        title    = {Metasurface Router for Near-Field Multi-User Low-Interference Access Driven by Structured Wave},
+        year     = {2026},
+        month    = nov,
+        number   = {11},
+        pages    = {29084-29089},
+        volume   = {75},
+        doi      = {10.1109/TVT.2026.3728032},
+      }
+    selected: false
