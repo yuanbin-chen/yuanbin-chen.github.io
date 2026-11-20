@@ -56,7 +56,7 @@ topics:
       - label: Angular-Distance Based Channel Estimation for Holographic MIMO
         url: /publications/#angular-distance-estimation
   - title: Reconfigurable Intelligent Surfaces (RIS)
-    id: reconfigurable-intelligent-surfaces
+    id: ris
     body: I study RIS-assisted propagation and channel estimation, as well as robust
       beamforming and resource allocation when the channel is uncertain or the
       terminals are moving rapidly.
