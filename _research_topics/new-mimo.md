@@ -12,7 +12,6 @@ related_papers:
 - _papers/angular-distance-estimation.md
 - _papers/unified-near-far-paradigm.md
 - _papers/holographic-channel-clustered-sparsity.md
-- _papers/near-field-structured-sparsity.md
 - _papers/codebook-design-for-holographic-mimo-near-field-prospects-and-road-to-standardization.md
 - _papers/unifying-far-near-field.md
 - _papers/holographic-mimo-systems.md
