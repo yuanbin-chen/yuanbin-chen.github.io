@@ -13,10 +13,10 @@ research_interests:
     url: /research/#quantum-rf
   - title: 6G MIMO Technologies
     detail: XL-MIMO, Holographic MIMO, RIS, Movable Antennas
-    url: /research/#near-field-mimo
+    url: /research/#new-mimo
   - title: Near-Field Communications
     detail: Unified Far-field and Near-field Framework in the Wavenumber Domain
-    url: /research/#near-field-communications
+    url: /research/#near-field
   - title: UAV / V2X Networks
     url: /research/#v2x-uav-networks
 news_heading: News

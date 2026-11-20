@@ -147,40 +147,46 @@ content:
     required: true
     options:
       format: markdown
-- name: research
-  label: Research
-  type: file
-  path: _data/research.yml
-  format: yaml
-  fields:
-  - name: heading
-    label: Page heading
+  - name: education_heading
+    label: Education heading
     type: string
     required: true
-  - name: description
-    label: Search result description
-    type: text
-  - name: topics
-    label: Research topics
-    type: object
-    list:
-      collapsible:
-        collapsed: true
-        summary: '{fields.title}'
+  - name: education
+    label: Education entries
+    type: string
+    list: true
+- name: research
+  label: Research
+  type: group
+  items:
+  - name: research_topics
+    label: Topics
+    type: collection
+    path: _research_topics
+    filename:
+      template: '{primary}.md'
+      field: create
+    format: yaml-frontmatter
+    subfolders: false
+    operations:
+      rename: false
+    view:
+      primary: title
+      fields:
+      - title
+      - order
+      sort:
+      - order
+      - title
+      default:
+        sort: order
+        order: asc
     fields:
     - name: title
       label: Topic name
       type: string
       required: true
-    - name: id
-      label: Link ID
-      type: string
-      description: Keep this ID when editing an existing topic.
-      required: true
-      pattern: &id001
-        regex: ^[a-z0-9]+(?:-[a-z0-9]+)*$
-        message: Use lowercase letters, numbers, and hyphens.
-    - name: body
+    - name: overview
       label: Topic description
       type: rich-text
       required: true
@@ -201,69 +207,76 @@ content:
         format: markdown
     - name: related_papers
       label: Related publications
-      type: object
-      list:
-        collapsible:
-          collapsed: true
-          summary: '{fields.label}'
-      fields:
-      - name: label
-        label: Link text
-        type: string
-        required: true
-      - name: url
-        label: Paper link
-        type: string
-        required: true
-  - name: education_heading
-    label: Education heading
-    type: string
-    required: true
-  - name: education
-    label: Education entries
-    type: string
-    list: true
+      type: reference
+      description: Search and select one or more entries. Linked entries are updated after the site workflow
+        runs.
+      options:
+        collection: papers
+        multiple: true
+        search: title,year,conference
+        value: '{path}'
+        label: '{title} ({year}){reference_note}'
+    - name: order
+      label: Display order
+      type: number
+      description: Optional. Smaller numbers appear first. Blank entries appear after numbered entries.
+      options: &id001
+        min: 0
+        step: 1
+  - name: research_page
+    label: Page settings
+    type: file
+    path: _data/research.yml
+    format: yaml
+    fields:
+    - name: heading
+      label: Page heading
+      type: string
+      required: true
+    - name: description
+      label: Search result description
+      type: text
 - name: publications
   label: Publications
-  type: file
-  path: _data/publications.yml
-  format: yaml
-  fields:
-  - name: heading
-    label: Page heading
-    type: string
-    required: true
-  - name: description
-    label: Search result description
-    type: text
-  - name: first_heading
-    label: First-author section heading
-    type: string
-    required: true
-  - name: journal_heading
-    label: Journal section heading
-    type: string
-    required: true
-  - name: conference_heading
-    label: Conference section heading
-    type: string
-    required: true
-  - name: other_heading
-    label: Non-first-author section heading
-    type: string
-    required: true
-  - name: main
+  type: group
+  items:
+  - name: papers
     label: Papers
-    type: object
-    list:
-      collapsible:
-        collapsed: true
-        summary: '{fields.year} · {fields.title}'
+    type: collection
+    path: _papers
+    filename:
+      template: '{primary}.md'
+      field: create
+    format: yaml-frontmatter
+    subfolders: false
+    operations:
+      rename: false
+    view:
+      primary: title
+      fields:
+      - title
+      - year
+      - conference
+      sort:
+      - year
+      - title
+      search:
+      - title
+      - authors
+      - conference
+      - year
+      default:
+        sort: year
+        order: desc
     fields:
     - name: title
       label: Paper title
       type: string
       required: true
+    - name: reference_note
+      label: Reference label note
+      type: string
+      hidden: true
     - name: authors
       label: Authors
       type: string
@@ -301,6 +314,17 @@ content:
           label: Journal paper
         - value: conference
           label: Conference paper
+    - name: topics
+      label: Research topics
+      type: reference
+      description: Search and select one or more entries. Linked entries are updated after the site workflow
+        runs.
+      options:
+        collection: research_topics
+        multiple: true
+        search: title
+        value: '{path}'
+        label: '{title}'
     - name: doi
       label: Paper link (DOI or publisher URL)
       type: string
@@ -341,23 +365,47 @@ content:
     - name: summary
       label: Homepage summary
       type: text
-    - name: id
-      label: Link ID
-      type: string
-      description: Keep existing IDs to preserve links to a paper. A blank ID is generated from the title.
-      pattern:
-        regex: ^(?:[a-z0-9]+(?:-[a-z0-9]+)*)?$
-        message: Use lowercase letters, numbers, and hyphens.
     - name: conference_short
       label: Venue abbreviation
       type: string
-    - name: topics
-      label: Research topic IDs
-      type: string
-      list: true
     - name: scholar_id
       label: Google Scholar article ID
       type: string
+    - name: order
+      label: Display order
+      type: number
+      description: Optional. Smaller numbers appear first within the same year for first-author papers, and
+        in list order elsewhere.
+      options: *id001
+  - name: publications_page
+    label: Page settings
+    type: file
+    path: _data/publications.yml
+    format: yaml
+    fields:
+    - name: heading
+      label: Page heading
+      type: string
+      required: true
+    - name: description
+      label: Search result description
+      type: text
+    - name: first_heading
+      label: First-author section heading
+      type: string
+      required: true
+    - name: journal_heading
+      label: Journal section heading
+      type: string
+      required: true
+    - name: conference_heading
+      label: Conference section heading
+      type: string
+      required: true
+    - name: other_heading
+      label: Non-first-author section heading
+      type: string
+      required: true
 - name: projects
   label: Projects
   type: file
@@ -401,7 +449,7 @@ content:
       label: Link text
       type: string
 - name: honors
-  label: Honors and awards
+  label: Honors
   type: file
   path: _data/honors.yml
   format: yaml
@@ -459,7 +507,9 @@ content:
       type: string
       description: Keep the link ID of an existing section.
       required: true
-      pattern: *id001
+      pattern:
+        regex: ^[a-z0-9]+(?:-[a-z0-9]+)*$
+        message: Use lowercase letters, numbers, and hyphens.
     - name: body
       label: Service details
       type: rich-text

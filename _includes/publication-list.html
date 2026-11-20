@@ -5,7 +5,7 @@
 {% endif %}
 {% for paper in include.papers %}
   {% assign paper_link = paper.doi | default: paper.page %}
-  {% assign paper_id = paper.id | default: paper.title | slugify %}
+  {% assign paper_id = paper.relative_path | split: '/' | last | remove: '.md' %}
   <li id="{{ paper_id | escape }}"{% if include.number_prefix %} value="{{ forloop.rindex }}" data-publication-number="{{ include.number_prefix }}{{ forloop.rindex }}"{% elsif include.numbered %} value="{{ forloop.index }}"{% endif %}{% if include.featured and paper.image and paper.image != '' %} class="featured-publication"{% endif %} data-publication data-author-role="{{ paper.author_role | escape }}">
     {% if include.featured and paper.image and paper.image != '' %}
       <img class="publication-figure" src="{{ paper.image | relative_url | escape }}" alt="{{ paper.image_alt | default: paper.title | escape }}" loading="lazy">
@@ -49,6 +49,17 @@
         {% endif %}
         {% if paper.others and paper.others != '' %}{{ paper.others | escape }}{% endif %}
       </div>
+      {% if include.numbered and paper.topics.size > 0 %}
+        <div class="publication-research-topics" role="group" aria-label="Research topics">
+          {% for topic_path in paper.topics %}
+          {% assign topic = site.research_topics | where: 'relative_path', topic_path | first %}
+          {% if topic %}
+          {% assign topic_id = topic_path | split: '/' | last | remove: '.md' %}
+          <a href="{{ '/research/#' | append: topic_id | relative_url | escape }}">{{ topic.title | escape }}</a>
+          {% endif %}
+          {% endfor %}
+        </div>
+      {% endif %}
       {% if include.featured and paper.summary and paper.summary != '' %}
         <p class="publication-summary">{{ paper.summary | escape }}</p>
       {% endif %}

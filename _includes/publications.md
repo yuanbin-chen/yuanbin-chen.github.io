@@ -1,5 +1,6 @@
 {% include scholar-snapshot.html %}
 {% assign publication_data = site.data.publications %}
+{% assign papers = site.papers | sort: 'order', 'last' %}
 {% if include.selected_only %}
 <h2 id="selected-publications" class="selected-publications-heading"><a href="{{ '/publications/' | relative_url }}">{{ site.data.home.featured_heading | escape }}</a></h2>
 {% else %}
@@ -13,10 +14,10 @@
 
 <div class="publications{% if include.selected_only %} selected-publications{% endif %}" data-publication-list>
 {% if include.selected_only %}
-  {% assign selected_papers = publication_data.main | where: "selected", true %}
+  {% assign selected_papers = papers | where: "selected", true %}
   {% include publication-list.html papers=selected_papers featured=true %}
 {% else %}
-  {% assign first_author_papers = publication_data.main | where_exp: "paper", "paper.author_role != 'coauthor'" %}
+  {% assign first_author_papers = papers | where_exp: "paper", "paper.author_role != 'coauthor'" %}
   {% assign paper_years = first_author_papers | group_by: 'year' | sort: 'name' | reverse %}
   {% assign newest_first = '' | split: ',' %}
   {% for year in paper_years %}
@@ -24,7 +25,7 @@
   {% endfor %}
   {% assign journals = newest_first | where_exp: "paper", "paper.publication_type != 'conference'" %}
   {% assign conferences = newest_first | where: "publication_type", "conference" %}
-  {% assign other_papers = publication_data.main | where: "author_role", "coauthor" %}
+  {% assign other_papers = papers | where: "author_role", "coauthor" %}
   <section class="publication-group" aria-labelledby="first-author-publications" data-publication-group>
     <h2 id="first-author-publications">{{ publication_data.first_heading | escape }}</h2>
     {% if journals.size > 0 %}

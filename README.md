@@ -12,18 +12,19 @@ Jekyll site for [yuanbin-chen.github.io](https://yuanbin-chen.github.io/), adapt
 | --- | --- | --- |
 | Profile and contact | Name, university, portrait, emails, profiles, position, and public CV PDF | `_data/profile.yml` |
 | Home | Introduction, honor below the university line, research interests, and news display | `_data/home.yml` |
-| Bio | Full biography | `_data/bio.yml` |
-| Research | Research topics, related papers, figures, and education | `_data/research.yml` |
-| Publications | Papers, author roles, links, BibTeX, and homepage selections | `_data/publications.yml` |
+| Bio | Full biography and education | `_data/bio.yml` |
+| Research | Research topics, related papers, and figures | `_research_topics/` |
+| Publications | Papers, author roles, research links, BibTeX, and homepage selections | `_papers/` |
 | Projects | Project names, roles, dates, descriptions, and links | `_data/projects.yml` |
-| Honors and awards | Awards and dates | `_data/honors.yml` |
+| Honors | Awards and dates | `_data/honors.yml` |
 | Professional services | Editorial and conference service | `_data/services.yml` |
 | News | Announcements, deadlines, and links | `_data/news.yml` |
 | Navigation | Top menu labels, order, and links | `_data/navigation.yml` |
 | CV reader | CV page heading and PDF section bookmarks | `_data/cv_sections.yml` |
 
 - Edit the short research interests list in **Home** and the detailed topic sections in **Research**. There is one list of news items, sorted by month. The homepage shows the latest items up to the count set in Home.
-- In Publications, select **First author**, **Co-first author**, or **Non-first author**. Set **Publication type** to Journal paper or Conference paper. First-author and co-first-author papers are grouped by type and sorted by year, newest first. Drag papers to set their order within a year. Enable **Show on the homepage** and add a figure and summary for a selected publication. Keep the link ID of an existing entry so its links continue working.
+- In Publications, select **First author**, **Co-first author**, or **Non-first author**. Set **Publication type** to Journal paper or Conference paper. First-author and co-first-author papers are grouped by type and sorted by year, newest first. Set **Display order** to arrange papers from the same year. Enable **Show on the homepage** and add a figure and summary for a selected publication. The saved file name supplies the paper's link ID.
+- Select related papers in **Research → Topics** or research topics in **Publications → Papers**. Either editor can add or remove a link. The deployment workflow copies the change to the other editor and updates both public pages. Refresh the editor after the deployment finishes.
 - Use **Images** to upload a portrait or figure. Upload a public copy of the CV under **CV PDFs**, then select the file in **Profile and contact**. Set section bookmarks in **CV reader** if the PDF headings have changed.
 
 ## Preview with Jekyll

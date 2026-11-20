@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Honors and Awards
+title: Honors
 editorial: honors
 permalink: /honors/
 full_width: true

@@ -22,3 +22,9 @@ exclude:
   - .github
   - .venv
   - .pages.yml
+
+collections:
+  papers:
+    output: false
+  research_topics:
+    output: false

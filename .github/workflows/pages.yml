@@ -15,10 +15,47 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build:
+  sync_research_links:
     if: >-
       (github.event_name != 'workflow_run' && github.ref == format('refs/heads/{0}', github.event.repository.default_branch)) ||
       (github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == github.event.repository.default_branch)
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    outputs:
+      revision: ${{ steps.sync.outputs.revision }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+      - name: Sync publication and research links
+        id: sync
+        env:
+          SITE_BRANCH: ${{ github.event.repository.default_branch }}
+        run: |
+          python3 -m venv "$RUNNER_TEMP/research-link-tools"
+          python="$RUNNER_TEMP/research-link-tools/bin/python"
+          "$python" -m pip install --disable-pip-version-check PyYAML==6.0.3
+          for attempt in 1 2 3; do
+            git fetch --no-tags origin "$SITE_BRANCH"
+            git checkout --detach FETCH_HEAD
+            "$python" scripts/sync_research_links.py
+            git add -u
+            if git diff --cached --quiet; then
+              echo "revision=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' \
+              commit -m 'Sync research and publication links'
+            if git push origin "HEAD:refs/heads/$SITE_BRANCH"; then
+              echo "revision=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+          done
+          exit 1
+
+  build:
+    needs: sync_research_links
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -26,7 +63,7 @@ jobs:
     steps:
       - uses: actions/checkout@v7
         with:
-          ref: ${{ github.event.repository.default_branch }}
+          ref: ${{ needs.sync_research_links.outputs.revision }}
       - name: Read Pages configuration
         id: pages
         uses: actions/configure-pages@v5
@@ -48,7 +85,7 @@ jobs:
         with:
           source: ./
           destination: ./_site
-          build_revision: ${{ github.sha }}
+          build_revision: ${{ needs.sync_research_links.outputs.revision }}
       - name: Upload site
         uses: actions/upload-pages-artifact@v4
 

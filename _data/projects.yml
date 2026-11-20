@@ -20,10 +20,10 @@ items:
   description: Studies channel estimation, transmission design, and resource allocation for RIS-assisted links under
     high mobility.
   link_label: RIS research
-  link_url: /research/#reconfigurable-intelligent-surfaces
+  link_url: /research/#ris
 - title: Integrated Sensing and Communication, AI/ML, and Holographic Radio
   role: Technical Member
   dates: 2022–2023
   description: Worked on holographic radio technologies during my research visit to Tsinghua University.
   link_label: XL-MIMO and holographic MIMO research
-  link_url: /research/#near-field-mimo
+  link_url: /research/#new-mimo

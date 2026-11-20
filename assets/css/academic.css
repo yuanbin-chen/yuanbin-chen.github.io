@@ -280,6 +280,15 @@ html:not([data-theme="dark"]) .wrapper a:hover {
   gap: 2px 9px;
 }
 
+.publication-research-topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 12px;
+  margin-top: 2px;
+  font-size: 14px;
+}
+
+.publication-research-topics a,
 .publication-resource-links a {
   text-decoration: underline;
   text-underline-offset: 0.14em;
