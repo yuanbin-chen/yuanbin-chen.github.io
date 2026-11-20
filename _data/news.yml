@@ -1,21 +1,32 @@
 heading: News
 description: Research updates and calls for papers from Yuanbin Chen.
 items:
-- month: 2027-10
-  title: 'Rydberg Atomic Quantum Receivers for OFDM Systems: An Atomic-Comb Design'
-  description: Submitted to an IEEE journal. Y. Chen, C. M. S. See, and C. Yuen, arXiv:2610.15306 (2026).
-  url: https://arxiv.org/abs/2610.15306
-  link_label: arXiv preprint
-- month: 2027-10
-  title: IEEE Communications Magazine · Call for Papers
-  description: 'Lead Guest Editor for “The Upper Mid-Band (FR3) for 6G: Technologies, Systems, and Deployment.”'
-  deadline: 15 March 2027
-  url: https://www.comsoc.org/publications/magazines/ieee-communications-magazine/cfp/upper-mid-band-fr3-6g-technologies-systems-and-deployment
-  link_label: Official CFP
-- month: 2027-09
-  title: IEEE Wireless Communications · Call for Papers
-  description: 'Co-Lead Guest Editor for “Atomic-to-Network: Quantum Radio Front-Ends for 6G Wireless Communications
-    and Sensing.”'
-  deadline: 1 March 2027
-  url: https://www.comsoc.org/publications/magazines/ieee-wireless-communications/cfp/atomic-network-quantum-radio-front-ends-6g-wireless-communications-and-sensing
-  link_label: Official CFP
+  - title: Paper Submitted
+    month: 2027-10
+    description: 'Our latest research paper titled "Rydberg Atomic Quantum Receivers
+      for OFDM Systems: An Atomic-Comb Design" has been submitted to IEEE
+      Journal'
+    url: https://arxiv.org/abs/2610.15306
+    link_label: arXiv preprint
+  - title: IEEE Communications Magazine · Call for Papers
+    month: 2027-10
+    description: "Lead Guest Editor for Special Issue “The Upper Mid-Band (FR3) for
+      6G: Technologies, Systems, and Deployment.”"
+    deadline: 15 March 2027
+    url: https://www.comsoc.org/publications/magazines/ieee-communications-magazine/cfp/upper-mid-band-fr3-6g-technologies-systems-and-deployment
+    link_label: Official CFP
+  - title: IEEE Wireless Communications · Call for Papers
+    month: 2027-09
+    description: "Lead Guest Editor for Special Issue “Atomic-to-Network: Quantum
+      Radio Front-Ends for 6G Wireless Communications and Sensing.”"
+    deadline: 1 March 2027
+    url: https://www.comsoc.org/publications/magazines/ieee-wireless-communications/cfp/atomic-network-quantum-radio-front-ends-6g-wireless-communications-and-sensing
+    link_label: Official CFP
+  - title: "Space: Science & Technology · Call for Papers"
+    month: 2026-08
+    description: 'Lead Guest Editor for Special Issue “Atomic-to-Space: Quantum
+      Sensors for Spaceborne Communications and Sensing.” Space: Science &
+      Technology is a JCR Q1 journal, IF=6.4 (中科院一区、"卓越计划"期刊)。'
+    deadline: 31 December 2027
+    url: https://spj.science.org/page/space/si/atomic-to-space
+    link_label: Official CFP
