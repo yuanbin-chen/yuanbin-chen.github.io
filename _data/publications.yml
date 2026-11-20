@@ -813,3 +813,26 @@ main:
     conference_short: TVT
     topics:
       - ris-vehicular
+  - title: Electromagnetic-Communication Joint Modeling and Application for
+      RIS-Assisted Wireless Systems
+    authors: Xiaocun Zong, Yuanbin Chen, Fan Yang, Zhaocheng Wang, Zhijun Zhang,
+      Shenheng Xu, Maokun Li
+    conference: IEEE Journal of Selected Topics in Electromagnetics, Antennas and
+      Propagation
+    year: 2026
+    author_role: coauthor
+    publication_type: journal
+    doi: 10.1109/JSTEAP.2026.3721014
+    bibtex: >-
+      @Article{zong-2026,
+        author   = {Zong, Xiaocun and Chen, Yuanbin and Yang, Fan and Wang, Zhaocheng and Zhang, Zhijun and Xu, Shenheng and Li, Maokun},
+        journal  = {IEEE Journal of Selected Topics in Electromagnetics, Antennas and Propagation},
+        title    = {Electromagnetic-Communication Joint Modeling and Application for {RIS}-Assisted Wireless Systems},
+        year     = {2026},
+        month    = aug,
+        pages    = {462-476},
+        volume   = {2},
+        doi      = {10.1109/JSTEAP.2026.3721014},
+        keywords = {Modeling;Reconfigurable intelligent surfaces;Antennas;Wireless communication;Arrays;Delays;Apertures;Symbols;Bit error rate;Baseband;Aperture transit time;bit error rate (BER);joint modeling;reconfigurable intelligent surface (RIS);wireless communications},
+      }
+    selected: false
