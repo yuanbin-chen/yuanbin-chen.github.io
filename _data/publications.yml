@@ -752,3 +752,26 @@ main:
     selected: false
     topics:
       - near-field-mimo
+  - title: Near-Field Sparse Channel Estimation for Extremely Large-Scale RIS-Aided
+      Wireless Communications
+    authors: Zixing Tang, Yuanbin Chen, Ying Wang, Tainqi Mao, Qingqing Wu, Marco Di
+      Renzo, Lajos Hanzo
+    conference: Proc. of IEEE GCWorkshops
+    year: 2023
+    author_role: co-first
+    publication_type: conference
+    doi: 10.1109/GCWkshps58843.2023.10464973
+    bibtex: >
+      @InProceedings{tang-GC,
+        author    = {Tang, Zixing and Chen, Yuanbin, and Wang Ying, and Mao, Tainqi and Wu, Qingqing and Renzo, Marco Di, and Hanzo, Lajos},
+        booktitle = {Proc. of IEEE GCWorkshops},
+        title     = {Near-Field Sparse Channel Estimation for Extremely Large-Scale RIS-Aided Wireless Communications},
+        year      = {2023},
+        address   = {Kuala Lumpur, Malaysia},
+        month     = dec,
+        note      = {Available online: \url{https://arxiv.org/abs/2311.07249}},
+        pages     = {1373-1379},
+        doi       = {10.1109/GCWkshps58843.2023.10464973},
+      }
+    notes: Best Workshop Paper Award
+    selected: false
