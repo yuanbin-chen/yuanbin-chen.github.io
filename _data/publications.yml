@@ -332,6 +332,50 @@ main:
     conference_short: JSAC
     topics:
       - near-field-mimo
+  - title: Two-Timescale Beamforming Optimization for Downlink Multi-User
+      Holographic MIMO Surfaces
+    authors: Haochen Wu, Yuanbin Chen, Yang Ming, Zhaocheng Wang
+    conference: IEEE Transactions on Vehicular Technology
+    year: 2024
+    author_role: coauthor
+    doi: 10.1109/TVT.2023.3328634
+    bibtex: >
+      @Article{tvt-haochen,
+        author   = {Wu, Haochen and Chen, Yuanbin and Ming, Yang and Wang, Zhaocheng},
+        journal  = {IEEE Trans. Veh. Technol.},
+        title    = {Two-Timescale Beamforming Optimization for Downlink Multi-User Holographic MIMO Surfaces},
+        year     = {2024},
+        month    = mar,
+        number   = {3},
+        pages    = {4476-4481},
+        volume   = {73},
+        doi      = {10.1109/TVT.2023.3328634},
+        keywords = {Array signal processing;Feeds;Precoding;Quality of service;Interference;Hardware;Electromagnetic waveguides;Holographic MIMO surfaces (HMIMOS);holographic beamforming;two-timescale optimization;convex optimization},
+      }
+    selected: false
+  - title: Learning-Based Joint Beamforming and Antenna Movement Design for Movable
+      Antenna Systems
+    authors: Caihao Weng, Yuanbin Chen, Lipeng Zhu, Ying Wang
+    conference: IEEE Wireless Communications Letters
+    year: 2024
+    author_role: coauthor
+    doi: 10.1109/LWC.2024.3402683
+    bibtex: >-
+      @Article{weng-wcl-2024,
+        author   = {Weng, Caihao and Chen, Yuanbin and Zhu, Lipeng and Wang, Ying},
+        journal  = {IEEE Wireless Commun. Lett.},
+        title    = {Learning-Based Joint Beamforming and Antenna Movement Design for Movable Antenna Systems},
+        year     = {2024},
+        month    = aug,
+        number   = {8},
+        pages    = {2120-2124},
+        volume   = {13},
+        doi      = {10.1109/LWC.2024.3402683},
+        keywords = {Wireless communication;Transmitting antennas;Transmitters;Array signal processing;Receiving antennas;Radio frequency;Vectors;Movable antenna (MA);antenna position optimization;deep reinforcement learning (DRL);imperfect channel state information (CSI)},
+      }
+    selected: false
+    topics:
+      - movable-antenna
   - title: "Location Tracking for Reconfigurable Intelligent Surfaces Aided Vehicle
       Platoons: Diverse Sparsities Inspired Approaches"
     authors: Yuanbin Chen, Y. Wang, X. Guo, Z. Han, P. Zhang
@@ -517,6 +561,28 @@ main:
     conference_short: TWC
     topics:
       - ris-vehicular
+  - title: Reconfigurable Intelligent Surface Deployment for Blind Zone Improvement
+      in mmWave Wireless Networks
+    authors: Alexander Chen, Yuanbin Chen, Zhaocheng Wang
+    conference: IEEE Communications Letters
+    year: 2022
+    author_role: coauthor
+    doi: 10.1109/LCOMM.2022.3161656
+    bibtex: >
+      @Article{CL,
+        author  = {Chen, Alexander and Chen, Yuanbin and Wang, Zhaocheng},
+        title   = {Reconfigurable Intelligent Surface Deployment for Blind Zone Improvement in mmWave Wireless Networks},
+        journal = {IEEE Commun. Lett.},
+        year    = {2022},
+        volume  = {26},
+        number  = {6},
+        pages   = {1423-1427},
+        month   = jun,
+        doi     = {10.1109/LCOMM.2022.3161656},
+      }
+    selected: false
+    topics:
+      - RIS
   - title: QoS-Driven Spectrum Sharing for Reconfigurable Intelligent Surfaces
       (RISs) Aided Vehicular Networks
     authors: Yuanbin Chen, Y. Wang, J. Zhang, M. Di Renzo
