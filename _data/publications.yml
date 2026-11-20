@@ -2,6 +2,8 @@ heading: Publications
 description: Research publications by Yuanbin Chen, grouped by authorship, with
   paper links and BibTeX citations.
 first_heading: First-Author Publications
+journal_heading: Journal Papers
+conference_heading: Conference Papers
 other_heading: Non-First-Author Publications
 main:
   - title: Wideband Quantum Transduction for Rydberg Atomic Receivers Using Six-Wave
@@ -10,6 +12,7 @@ main:
     conference: IEEE Journal on Selected Areas in Communications
     year: 2026
     author_role: first
+    publication_type: journal
     doi: https://doi.org/10.1109/JSAC.2026.3716945
     pdf: https://arxiv.org/pdf/2602.13955
     bibtex: >-
@@ -40,6 +43,7 @@ main:
     conference: IEEE Journal on Selected Areas in Communications
     year: 2026
     author_role: first
+    publication_type: journal
     doi: https://doi.org/10.1109/JSAC.2026.3686343
     pdf: https://arxiv.org/pdf/2508.17179
     bibtex: >-
@@ -67,6 +71,7 @@ main:
     conference: IEEE Transactions on Wireless Communications
     year: 2026
     author_role: first
+    publication_type: journal
     doi: https://doi.org/10.1109/TWC.2026.3701846
     pdf: https://arxiv.org/pdf/2501.11842
     bibtex: >-
@@ -98,6 +103,7 @@ main:
       Propagation
     year: 2026
     author_role: coauthor
+    publication_type: journal
     doi: https://doi.org/10.1109/JSTEAP.2026.3721014
     bibtex: >-
       @article{chen2026-ris-electromagnetic-joint-model,
@@ -121,6 +127,7 @@ main:
     conference: IEEE Communications Magazine
     year: 2025
     author_role: first
+    publication_type: journal
     doi: https://doi.org/10.1109/MCOM.001.2300845
     pdf: https://arxiv.org/pdf/2407.14815
     bibtex: >-
@@ -150,6 +157,7 @@ main:
     conference: IEEE Network
     year: 2025
     author_role: coauthor
+    publication_type: journal
     doi: https://doi.org/10.1109/MNET.2025.3541316
     pdf: https://arxiv.org/pdf/2501.02730
     bibtex: >
@@ -175,6 +183,7 @@ main:
     conference: IEEE Transactions on Vehicular Technology
     year: 2025
     author_role: coauthor
+    publication_type: journal
     doi: https://doi.org/10.1109/TVT.2025.3551299
     bibtex: >-
       @article{chen2025-holographic-channel-clustered-sparsity,
@@ -198,6 +207,7 @@ main:
     conference: IEEE Transactions on Vehicular Technology
     year: 2025
     author_role: coauthor
+    publication_type: journal
     doi: 10.1109/TVT.2025.3572700
     bibtex: >-
       @Article{zyz-tvt,
@@ -219,6 +229,7 @@ main:
     conference: IEEE Transactions on Wireless Communications
     year: 2025
     author_role: coauthor
+    publication_type: journal
     doi: 10.1109/TWC.2025.3570325
     bibtex: >-
       @Article{guo-twc-2025,
@@ -240,6 +251,7 @@ main:
     conference: IEEE Communications Magazine
     year: 2025
     author_role: coauthor
+    publication_type: journal
     doi: https://doi.org/10.1109/MCOM.001.2300836
     pdf: https://arxiv.org/pdf/2406.18985
     bibtex: >-
@@ -263,6 +275,7 @@ main:
     conference: IEEE Wireless Communications Letters
     year: 2024
     author_role: first
+    publication_type: journal
     doi: https://doi.org/10.1109/LWC.2024.3443880
     bibtex: >-
       @article{chen2024-unifying-far-near-field,
@@ -287,6 +300,7 @@ main:
     conference: IEEE Vehicular Technology Magazine
     year: 2024
     author_role: first
+    publication_type: journal
     doi: https://ieeexplore.ieee.org/document/10557710/
     bibtex: >-
       @article{chen2024-holographic-mimo-systems,
@@ -309,6 +323,7 @@ main:
     conference: IEEE Journal on Selected Areas in Communications
     year: 2024
     author_role: first
+    publication_type: journal
     doi: https://doi.org/10.1109/JSAC.2024.3389116
     pdf: https://arxiv.org/pdf/2311.15158
     bibtex: >-
@@ -338,6 +353,7 @@ main:
     conference: IEEE Transactions on Vehicular Technology
     year: 2024
     author_role: coauthor
+    publication_type: journal
     doi: 10.1109/TVT.2023.3328634
     bibtex: >
       @Article{tvt-haochen,
@@ -359,6 +375,7 @@ main:
     conference: IEEE Wireless Communications Letters
     year: 2024
     author_role: coauthor
+    publication_type: journal
     doi: 10.1109/LWC.2024.3402683
     bibtex: >-
       @Article{weng-wcl-2024,
@@ -382,6 +399,7 @@ main:
     conference: IEEE Journal on Selected Areas in Communications
     year: 2023
     author_role: first
+    publication_type: journal
     doi: https://ieeexplore.ieee.org/document/10158691/
     bibtex: >-
       @article{chen2023-ris-vehicle-platoons,
@@ -405,6 +423,7 @@ main:
     conference: IEEE Transactions on Wireless Communications
     year: 2023
     author_role: first
+    publication_type: journal
     doi: https://ieeexplore.ieee.org/document/9984171/
     bibtex: >-
       @article{chen2023-high-mobility-millimeter-wave,
@@ -429,6 +448,7 @@ main:
     conference: IEEE Global Communications Conference Workshops
     year: 2023
     author_role: co-first
+    publication_type: conference
     doi: https://doi.org/10.1109/GCWkshps58843.2023.10464973
     pdf: https://arxiv.org/pdf/2311.07249
     bibtex: >-
@@ -453,6 +473,7 @@ main:
     conference: IEEE Transactions on Vehicular Technology
     year: 2023
     author_role: coauthor
+    publication_type: journal
     doi: https://doi.org/10.1109/TVT.2023.3279397
     bibtex: >-
       @article{chen2023-near-field-triple-parametric-estimation,
@@ -474,6 +495,7 @@ main:
     conference: IEEE Transactions on Communications
     year: 2023
     author_role: coauthor
+    publication_type: journal
     doi: https://doi.org/10.1109/TCOMM.2023.3261385
     bibtex: >-
       @article{chen2023-ris-wireless-beacon-estimation,
@@ -497,6 +519,7 @@ main:
     conference: IEEE Journal on Selected Areas in Communications
     year: 2022
     author_role: first
+    publication_type: journal
     doi: https://ieeexplore.ieee.org/document/9851661/
     bibtex: >-
       @article{chen2022-active-ris-robust-beamforming,
@@ -520,6 +543,7 @@ main:
     conference: IEEE Vehicular Technology Magazine
     year: 2022
     author_role: first
+    publication_type: journal
     doi: https://ieeexplore.ieee.org/document/9744412/
     bibtex: >-
       @article{chen2022-ris-vehicular-networks,
@@ -543,6 +567,7 @@ main:
     conference: IEEE Transactions on Wireless Communications
     year: 2022
     author_role: first
+    publication_type: journal
     doi: https://ieeexplore.ieee.org/document/9505311/
     bibtex: >-
       @article{chen2022-robust-transmission-statistical-csi,
@@ -567,6 +592,7 @@ main:
     conference: IEEE Communications Letters
     year: 2022
     author_role: coauthor
+    publication_type: journal
     doi: 10.1109/LCOMM.2022.3161656
     bibtex: >
       @Article{CL,
@@ -589,6 +615,7 @@ main:
     conference: IEEE Transactions on Wireless Communications
     year: 2021
     author_role: first
+    publication_type: journal
     doi: https://ieeexplore.ieee.org/document/9403921/
     bibtex: >-
       @article{chen2021-qos-driven-spectrum-sharing,
@@ -612,6 +639,7 @@ main:
     conference: IEEE Wireless Communications Letters
     year: 2021
     author_role: coauthor
+    publication_type: journal
     doi: https://doi.org/10.1109/LWC.2021.3081464
     bibtex: >-
       @article{chen2021-ris-uav-secure-transmission,
@@ -636,6 +664,7 @@ main:
     conference: IEEE Systems Journal
     year: 2021
     author_role: coauthor
+    publication_type: journal
     doi: https://doi.org/10.1109/JSYST.2020.3019463
     bibtex: >-
       @article{chen2021-uav-trajectory-resource-allocation,
@@ -659,6 +688,7 @@ main:
     conference: IEEE Transactions on Vehicular Technology
     year: 2020
     author_role: first
+    publication_type: journal
     doi: https://ieeexplore.ieee.org/document/9144463/
     bibtex: >-
       @article{chen2020-ris-resource-allocation,
@@ -682,6 +712,7 @@ main:
     conference: IEEE Transactions on Vehicular Technology
     year: 2020
     author_role: first
+    publication_type: journal
     doi: https://ieeexplore.ieee.org/document/9084239/
     bibtex: >-
       @article{chen2020-network-slicing-vehicular,

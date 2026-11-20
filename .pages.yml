@@ -240,6 +240,14 @@ content:
     label: First-author section heading
     type: string
     required: true
+  - name: journal_heading
+    label: Journal section heading
+    type: string
+    required: true
+  - name: conference_heading
+    label: Conference section heading
+    type: string
+    required: true
   - name: other_heading
     label: Non-first-author section heading
     type: string
@@ -283,6 +291,16 @@ content:
           label: Co-first author
         - value: coauthor
           label: Non-first author
+    - name: publication_type
+      label: Publication type
+      type: select
+      required: true
+      options:
+        values:
+        - value: journal
+          label: Journal paper
+        - value: conference
+          label: Conference paper
     - name: doi
       label: Paper link (DOI or publisher URL)
       type: string

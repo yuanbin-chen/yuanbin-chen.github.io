@@ -213,9 +213,19 @@ html:not([data-theme="dark"]) .wrapper a:hover {
   font-size: 26px;
 }
 
+.publication-type-heading {
+  margin: 16px 0 6px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
 .publications ol.numbered-bibliography {
   list-style: decimal;
   padding-inline-start: 1.85rem;
+}
+
+.publications ol.prefixed-bibliography {
+  padding-inline-start: 2.5rem;
 }
 
 .publications ul.bibliography {
@@ -235,6 +245,10 @@ html:not([data-theme="dark"]) .wrapper a:hover {
   color: var(--global-theme-color);
   font-weight: 600;
   font-variant-numeric: tabular-nums;
+}
+
+.publications .bibliography li[data-publication-number]::marker {
+  content: attr(data-publication-number) ". ";
 }
 
 .publication-title {
@@ -313,6 +327,18 @@ html:not([data-theme="dark"]) .wrapper a:hover {
 .publications .publication-note {
   font-size: 0.875rem;
   color: var(--global-theme-color);
+}
+
+.publications .publication-note-highly-cited {
+  padding: 0 4px;
+  border-radius: 3px;
+  background: #fff0ee;
+  color: #a72219;
+}
+
+html[data-theme="dark"] .publications .publication-note-highly-cited {
+  background: #392124;
+  color: #ffaaa0;
 }
 
 .publications li[id]:target .publication-title {

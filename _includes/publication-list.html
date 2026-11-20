@@ -1,12 +1,12 @@
 {% if include.numbered %}
-<ol class="bibliography numbered-bibliography" role="list">
+<ol class="bibliography numbered-bibliography{% if include.number_prefix %} prefixed-bibliography{% endif %}"{% if include.number_prefix %} reversed{% endif %} role="list">
 {% else %}
 <ul class="bibliography" role="list">
 {% endif %}
 {% for paper in include.papers %}
   {% assign paper_link = paper.doi | default: paper.page %}
   {% assign paper_id = paper.id | default: paper.title | slugify %}
-  <li id="{{ paper_id | escape }}"{% if include.numbered %} value="{{ forloop.index }}"{% endif %}{% if include.featured and paper.image and paper.image != '' %} class="featured-publication"{% endif %} data-publication data-author-role="{{ paper.author_role | escape }}">
+  <li id="{{ paper_id | escape }}"{% if include.number_prefix %} value="{{ forloop.rindex }}" data-publication-number="{{ include.number_prefix }}{{ forloop.rindex }}"{% elsif include.numbered %} value="{{ forloop.index }}"{% endif %}{% if include.featured and paper.image and paper.image != '' %} class="featured-publication"{% endif %} data-publication data-author-role="{{ paper.author_role | escape }}">
     {% if include.featured and paper.image and paper.image != '' %}
       <img class="publication-figure" src="{{ paper.image | relative_url | escape }}" alt="{{ paper.image_alt | default: paper.title | escape }}" loading="lazy">
     {% endif %}
@@ -43,7 +43,10 @@
             <a class="publication-citations" href="{% if scholar_article.cited_by_url %}{{ scholar_article.cited_by_url | escape }}{% else %}https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user={{ scholar_stats.profile_id | url_encode }}&amp;citation_for_view={{ paper.scholar_id | url_encode }}{% endif %}" target="_blank" rel="noopener noreferrer" title="Google Scholar citations · checked {{ scholar_stats.updated | date: '%B %-d, %Y' }}">Cited by {{ article_citation_count }}</a>
           {% endif %}
         {% endif %}
-        {% if paper.notes and paper.notes != '' %}<strong class="publication-note">{{ paper.notes | escape }}</strong>{% endif %}
+        {% if paper.notes and paper.notes != '' %}
+          {% assign note_text = paper.notes | downcase %}
+          <strong class="publication-note{% if note_text contains 'esi highly cited' %} publication-note-highly-cited{% endif %}">{{ paper.notes | escape }}</strong>
+        {% endif %}
         {% if paper.others and paper.others != '' %}{{ paper.others | escape }}{% endif %}
       </div>
       {% if include.featured and paper.summary and paper.summary != '' %}

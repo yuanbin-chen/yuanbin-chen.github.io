@@ -17,10 +17,24 @@
   {% include publication-list.html papers=selected_papers featured=true %}
 {% else %}
   {% assign first_author_papers = publication_data.main | where_exp: "paper", "paper.author_role != 'coauthor'" %}
+  {% assign paper_years = first_author_papers | group_by: 'year' | sort: 'name' | reverse %}
+  {% assign newest_first = '' | split: ',' %}
+  {% for year in paper_years %}
+    {% assign newest_first = newest_first | concat: year.items %}
+  {% endfor %}
+  {% assign journals = newest_first | where_exp: "paper", "paper.publication_type != 'conference'" %}
+  {% assign conferences = newest_first | where: "publication_type", "conference" %}
   {% assign other_papers = publication_data.main | where: "author_role", "coauthor" %}
   <section class="publication-group" aria-labelledby="first-author-publications" data-publication-group>
     <h2 id="first-author-publications">{{ publication_data.first_heading | escape }}</h2>
-    {% include publication-list.html papers=first_author_papers numbered=true %}
+    {% if journals.size > 0 %}
+    <h3 id="journal-papers" class="publication-type-heading">{{ publication_data.journal_heading | escape }}</h3>
+    {% include publication-list.html papers=journals numbered=true number_prefix="J" %}
+    {% endif %}
+    {% if conferences.size > 0 %}
+    <h3 id="conference-papers" class="publication-type-heading">{{ publication_data.conference_heading | escape }}</h3>
+    {% include publication-list.html papers=conferences numbered=true number_prefix="C" %}
+    {% endif %}
   </section>
   <section class="publication-group" aria-labelledby="non-first-author-publications" data-publication-group>
     <h2 id="non-first-author-publications">{{ publication_data.other_heading | escape }}</h2>

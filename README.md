@@ -23,7 +23,7 @@ Jekyll site for [yuanbin-chen.github.io](https://yuanbin-chen.github.io/), adapt
 | CV reader | CV page heading and PDF section bookmarks | `_data/cv_sections.yml` |
 
 - Edit the short research interests list in **Home** and the detailed topic sections in **Research**. There is one list of news items, sorted by month. The homepage shows the latest items up to the count set in Home.
-- In Publications, select **First author**, **Co-first author**, or **Non-first author**. Co-first papers appear in the first-author group. Enable **Show on the homepage** and add a figure and summary for a selected publication. Drag papers to change their order. Keep the link ID of an existing entry so its links continue working.
+- In Publications, select **First author**, **Co-first author**, or **Non-first author**. Set **Publication type** to Journal paper or Conference paper. First-author and co-first-author papers are grouped by type and sorted by year, newest first. Drag papers to set their order within a year. Enable **Show on the homepage** and add a figure and summary for a selected publication. Keep the link ID of an existing entry so its links continue working.
 - Use **Images** to upload a portrait or figure. Upload a public copy of the CV under **CV PDFs**, then select the file in **Profile and contact**. Set section bookmarks in **CV reader** if the PDF headings have changed.
 
 ## Preview with Jekyll
