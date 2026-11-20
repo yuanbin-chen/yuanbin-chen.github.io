@@ -38,7 +38,7 @@ topics:
     related_papers:
       - label: Unifying Far-Field and Near-Field Wireless Communications in 6G MIMO
         url: /publications/#unifying-far-near-field
-  - title: XL-MIMO / Holographic MIMO / Movable Antennas / RIS
+  - title: XL-MIMO / Holographic MIMO / Movable Antennas
     id: new-mimo
     body: For electrically large and densely sampled apertures, I study how to use
       wavenumber, angle, and distance information to recover the channel. One
