@@ -7,6 +7,9 @@ title: Home
 <div class="academic-profile">
   <div class="academic-profile-copy">
     <h1 id="about-me">{{ site.data.profile.title | escape }}{% if site.data.profile.name_zh and site.data.profile.name_zh != '' %} <span lang="zh">{{ site.data.profile.name_zh | escape }}</span>{% endif %}</h1>
+    {% if site.data.profile.position and site.data.profile.position != '' %}
+    <p class="academic-position">{{ site.data.profile.position | escape }}</p>
+    {% endif %}
     <p class="academic-affiliation">{% if site.data.profile.affiliation_link and site.data.profile.affiliation_link != '' %}<a href="{{ site.data.profile.affiliation_link | escape }}">{{ site.data.profile.affiliation | escape }}</a>{% else %}{{ site.data.profile.affiliation | escape }}{% endif %}</p>
     <div class="academic-bio">
       {{ home.introduction | markdownify }}

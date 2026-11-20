@@ -60,10 +60,19 @@ html:not([data-theme="dark"]) .wrapper a:hover {
   color: var(--global-theme-color);
 }
 
+.academic-position,
 .academic-affiliation {
-  margin: 2px 0 15px;
   font-size: 17px;
   line-height: 1.43;
+}
+
+.academic-position {
+  margin: 0 0 2px;
+  font-weight: 600;
+}
+
+.academic-affiliation {
+  margin: 2px 0 15px;
 }
 
 .academic-bio {
