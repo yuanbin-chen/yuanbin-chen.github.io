@@ -73,6 +73,10 @@ html:not([data-theme="dark"]) .wrapper a:hover {
   line-height: 1.44;
 }
 
+.academic-bio p:last-child {
+  margin-bottom: 0;
+}
+
 .academic-profile-links,
 .publication-profiles {
   display: flex;

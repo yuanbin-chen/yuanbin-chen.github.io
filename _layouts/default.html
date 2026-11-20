@@ -68,41 +68,41 @@
       {% unless page.full_width %}
       <header class="site-sidebar">
         
-        {% if site.avatar and site.avatar != '' %}
-        <a class="image avatar"><img src="{{ site.avatar | relative_url }}" alt="{{ site.title | escape }}" /></a>
+        {% if site.data.profile.avatar and site.data.profile.avatar != '' %}
+        <a class="image avatar"><img src="{{ site.data.profile.avatar | relative_url }}" alt="{{ site.data.profile.title | escape }}" /></a>
         {% endif %}
 
-        <h1>{{ site.title | escape }}</h1>
+        <h1>{{ site.data.profile.title | escape }}</h1>
 
-        {% if site.position and site.position != '' %}
-        <position style="font-size:1.10rem;">{{ site.position | escape }}</position>
+        {% if site.data.profile.position and site.data.profile.position != '' %}
+        <position style="font-size:1.10rem;">{{ site.data.profile.position | escape }}</position>
         <br>
         {% endif %}
-        {% if site.affiliation and site.affiliation != '' %}
-        {% if site.affiliation_link and site.affiliation_link != '' %}
-        <a href="{{ site.affiliation_link | relative_url | escape }}" rel="noopener"><autocolor>{{ site.affiliation | escape }}</autocolor></a>
+        {% if site.data.profile.affiliation and site.data.profile.affiliation != '' %}
+        {% if site.data.profile.affiliation_link and site.data.profile.affiliation_link != '' %}
+        <a href="{{ site.data.profile.affiliation_link | relative_url | escape }}" rel="noopener"><autocolor>{{ site.data.profile.affiliation | escape }}</autocolor></a>
         {% else %}
-        <autocolor>{{ site.affiliation | escape }}</autocolor>
+        <autocolor>{{ site.data.profile.affiliation | escape }}</autocolor>
         {% endif %}
         <br>
         {% endif %}
-        {% if site.email and site.email != '' %}
-        <email>{{ site.email | escape }}</email>
+        {% if site.data.profile.email and site.data.profile.email != '' %}
+        <email>{{ site.data.profile.email | escape }}</email>
         {% endif %}
-        {% if site.email2 and site.email2 != '' %}
+        {% if site.data.profile.email2 and site.data.profile.email2 != '' %}
         <br>
-        <email>{{ site.email2 | escape }}</email>
+        <email>{{ site.data.profile.email2 | escape }}</email>
         {% endif %}
         
         {% include scholar-stats.html %}
 
         {% assign profile_link_type = site.link_type | default: 'text' %}
         {% if profile_link_type == 'text' %}
-        {% if site.google_scholar and site.google_scholar != '' %}
-        [<a href="{{ site.google_scholar | relative_url | escape }}">Google Scholar</a>]<br>
+        {% if site.data.profile.google_scholar and site.data.profile.google_scholar != '' %}
+        [<a href="{{ site.data.profile.google_scholar | relative_url | escape }}">Google Scholar</a>]<br>
         {% endif %}
-        {% if site.orcid and site.orcid != '' %}
-        [<a href="{{ site.orcid | relative_url | escape }}">ORCID</a>]<br>
+        {% if site.data.profile.orcid and site.data.profile.orcid != '' %}
+        [<a href="{{ site.data.profile.orcid | relative_url | escape }}">ORCID</a>]<br>
         {% endif %}
         {% if site.linkedin and site.linkedin != '' %}
         [<a href="{{ site.linkedin | relative_url | escape }}">LinkedIn</a>]<br>
@@ -114,8 +114,8 @@
 
         {% if profile_link_type == 'icon' %}
         <div class="social-icons">
-        {% if site.google_scholar and site.google_scholar != '' %}
-        <a style="margin: 0 5px 0 0" href="{{ site.google_scholar | relative_url | escape }}">
+        {% if site.data.profile.google_scholar and site.data.profile.google_scholar != '' %}
+        <a style="margin: 0 5px 0 0" href="{{ site.data.profile.google_scholar | relative_url | escape }}">
           <i class="ai ai-google-scholar" style="font-size:1.2rem"></i>
         </a>  
         {% endif %}

@@ -1,34 +1,35 @@
 {% include scholar-snapshot.html %}
+{% assign publication_data = site.data.publications %}
 {% if include.selected_only %}
-<h2 id="selected-publications" class="selected-publications-heading"><a href="{{ '/publications/' | relative_url }}">Selected Publications</a></h2>
+<h2 id="selected-publications" class="selected-publications-heading"><a href="{{ '/publications/' | relative_url }}">{{ site.data.home.featured_heading | escape }}</a></h2>
 {% else %}
-<h1 id="publications" class="page-title">Publications</h1>
+<h1 id="publications" class="page-title">{{ publication_data.heading | escape }}</h1>
 
 <div class="publication-profiles" role="group" aria-label="Publication profiles">
-  {% if site.google_scholar %}<a href="{{ site.google_scholar | escape }}">Google Scholar</a>{% endif %}
-  {% if site.researchgate %}<a href="{{ site.researchgate | escape }}">ResearchGate</a>{% endif %}
+  {% if site.data.profile.google_scholar and site.data.profile.google_scholar != '' %}<a href="{{ site.data.profile.google_scholar | escape }}">Google Scholar</a>{% endif %}
+  {% if site.data.profile.researchgate and site.data.profile.researchgate != '' %}<a href="{{ site.data.profile.researchgate | escape }}">ResearchGate</a>{% endif %}
 </div>
 {% endif %}
 
 <div class="publications{% if include.selected_only %} selected-publications{% endif %}" data-publication-list>
 {% if include.selected_only %}
-  {% assign selected_papers = site.data.publications.main | where: "selected", true %}
+  {% assign selected_papers = publication_data.main | where: "selected", true %}
   {% include publication-list.html papers=selected_papers featured=true %}
 {% else %}
-  {% assign first_author_papers = site.data.publications.main | where_exp: "paper", "paper.author_role != 'coauthor'" %}
-  {% assign other_papers = site.data.publications.main | where: "author_role", "coauthor" %}
+  {% assign first_author_papers = publication_data.main | where_exp: "paper", "paper.author_role != 'coauthor'" %}
+  {% assign other_papers = publication_data.main | where: "author_role", "coauthor" %}
   <section class="publication-group" aria-labelledby="first-author-publications" data-publication-group>
-    <h2 id="first-author-publications">First-Author Publications</h2>
+    <h2 id="first-author-publications">{{ publication_data.first_heading | escape }}</h2>
     {% include publication-list.html papers=first_author_papers numbered=true %}
   </section>
   <section class="publication-group" aria-labelledby="non-first-author-publications" data-publication-group>
-    <h2 id="non-first-author-publications">Non-First-Author Publications</h2>
+    <h2 id="non-first-author-publications">{{ publication_data.other_heading | escape }}</h2>
     {% include publication-list.html papers=other_papers numbered=true %}
   </section>
 {% endif %}
 </div>
 {% if include.selected_only %}
-<p class="selected-publications-all"><a href="{{ '/publications/' | relative_url }}">View all publications</a></p>
+<p class="selected-publications-all"><a href="{{ '/publications/' | relative_url }}">{{ site.data.home.featured_link_label | escape }}</a></p>
 {% endif %}
 
 <dialog class="publication-bibtex-dialog" id="publication-bibtex-dialog" aria-labelledby="bibtex-dialog-title" aria-describedby="bibtex-paper-title">

@@ -1,11 +1,11 @@
 ---
 layout: default
 title: News
-description: Research updates and calls for papers from Yuanbin Chen.
+editorial: news
 permalink: /news/
 full_width: true
 ---
 
-<h1 class="page-title">News</h1>
+<h1 class="page-title">{{ site.data.news.heading | escape }}</h1>
 
 {% include news-list.html %}

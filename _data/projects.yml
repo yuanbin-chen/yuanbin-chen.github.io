@@ -1,0 +1,29 @@
+heading: Research Projects
+description: Selected research projects on Rydberg RF sensing, holographic radio, network optimization, and RIS-aided
+  vehicular networks.
+items:
+- title: Rydberg RF Sensing
+  role: Lead Scientist
+  dates: 2025–2028
+  description: Investigates Rydberg atomic receivers for radio-frequency sensing, including wideband RF-to-optical
+    transduction and the estimation of polarization and direction of arrival.
+  link_label: Quantum sensing research
+  link_url: /research/#quantum-rf
+- title: 5G Network Modeling and Optimization
+  role: Technical Member
+  dates: 2023–2027
+  description: Contributes mathematical modeling and algorithm design for resource allocation and optimization in
+    5G networks.
+- title: RIS-Empowered 6G Vehicular Networks
+  role: Principal Investigator
+  dates: 2022–2024
+  description: Studies channel estimation, transmission design, and resource allocation for RIS-assisted links under
+    high mobility.
+  link_label: RIS research
+  link_url: /research/#reconfigurable-intelligent-surfaces
+- title: Integrated Sensing and Communication, AI/ML, and Holographic Radio
+  role: Technical Member
+  dates: 2022–2023
+  description: Worked on holographic radio technologies during my research visit to Tsinghua University.
+  link_label: XL-MIMO and holographic MIMO research
+  link_url: /research/#near-field-mimo

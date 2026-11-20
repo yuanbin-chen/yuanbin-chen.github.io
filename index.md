@@ -1,37 +1,39 @@
 ---
 layout: homepage
 title: Home
-seo_title: Yuanbin Chen | Nanyang Technological University
 ---
 
+{% assign home = site.data.home %}
 <div class="academic-profile">
   <div class="academic-profile-copy">
-    <h1 id="about-me">Yuanbin Chen <span lang="zh">陈源彬</span></h1>
-    <p class="academic-affiliation"><a href="https://www.ntu.edu.sg/">Nanyang Technological University</a></p>
+    <h1 id="about-me">{{ site.data.profile.title | escape }}{% if site.data.profile.name_zh and site.data.profile.name_zh != '' %} <span lang="zh">{{ site.data.profile.name_zh | escape }}</span>{% endif %}</h1>
+    <p class="academic-affiliation">{% if site.data.profile.affiliation_link and site.data.profile.affiliation_link != '' %}<a href="{{ site.data.profile.affiliation_link | escape }}">{{ site.data.profile.affiliation | escape }}</a>{% else %}{{ site.data.profile.affiliation | escape }}{% endif %}</p>
+    <div class="academic-bio">
+      {{ home.introduction | markdownify }}
+    </div>
+    {% if site.data.research.topics.size > 0 %}
     <p class="academic-bio">
-      I am a Postdoctoral Research Fellow at School of Electrical and Electronic Engineering (EEE), Nanyang Technological University (NTU), Singapore, supervised by
-      <a href="https://blogs.ntu.edu.sg/chau-yuen/">Prof. Chau Yuen</a>.
-      I received the B.S. degree from Beijing Jiaotong University, Beijing, China, in 2019, and the Ph.D. degree from Beijing University of Posts and Telecommunications (BUPT), Beijing, China, in 2024. I graduated with honors from both institutions.
-    </p>
-    <p class="academic-bio">
-      My research interests include
-      {% for interest in site.data.research_interests -%}
-        <a href="{{ interest.url | relative_url }}">{{ interest.title | escape }}</a>{% if forloop.last %}.{% elsif forloop.rindex == 2 %}, and {% else %}, {% endif %}
+      {{ home.interests_intro | escape }}
+      {% for topic in site.data.research.topics -%}
+        <a href="{{ '/research/#' | append: topic.id | relative_url | escape }}">{{ topic.title | escape }}</a>{% if forloop.last %}.{% elsif forloop.rindex == 2 %}, and {% else %}, {% endif %}
       {%- endfor %}
     </p>
+    {% endif %}
     <div class="academic-profile-links" role="group" aria-label="Academic profiles">
-      <a href="{{ site.google_scholar }}">Google Scholar</a>
-      <a href="{{ site.researchgate }}">ResearchGate</a>
-      <a href="{{ site.orcid }}">ORCID</a>
+      {% if site.data.profile.google_scholar and site.data.profile.google_scholar != '' %}<a href="{{ site.data.profile.google_scholar | escape }}">Google Scholar</a>{% endif %}
+      {% if site.data.profile.researchgate and site.data.profile.researchgate != '' %}<a href="{{ site.data.profile.researchgate | escape }}">ResearchGate</a>{% endif %}
+      {% if site.data.profile.orcid and site.data.profile.orcid != '' %}<a href="{{ site.data.profile.orcid | escape }}">ORCID</a>{% endif %}
     </div>
     <div class="academic-profile-links academic-email-links" role="group" aria-label="Email addresses">
-      <a href="mailto:{{ site.email }}">{{ site.email }}</a>
-      <a href="mailto:{{ site.email2 }}">{{ site.email2 }}</a>
+      {% if site.data.profile.email and site.data.profile.email != '' %}<a href="mailto:{{ site.data.profile.email | escape }}">{{ site.data.profile.email | escape }}</a>{% endif %}
+      {% if site.data.profile.email2 and site.data.profile.email2 != '' %}<a href="mailto:{{ site.data.profile.email2 | escape }}">{{ site.data.profile.email2 | escape }}</a>{% endif %}
     </div>
   </div>
+  {% if site.data.profile.avatar and site.data.profile.avatar != '' %}
   <figure class="academic-portrait">
-    <img src="{{ site.avatar | relative_url }}" alt="Yuanbin Chen" width="480" height="560" fetchpriority="high">
+    <img src="{{ site.data.profile.avatar | relative_url | escape }}" alt="{{ site.data.profile.title | escape }}" width="480" height="560" fetchpriority="high">
   </figure>
+  {% endif %}
 </div>
 
 {% include news.md %}

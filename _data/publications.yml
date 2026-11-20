@@ -1,14 +1,28 @@
+heading: Publications
+description: Research publications by Yuanbin Chen, grouped by authorship, with paper links and BibTeX citations.
+first_heading: First-Author Publications
+other_heading: Non-First-Author Publications
 main:
 - id: wideband-quantum-transduction
   title: Wideband Quantum Transduction for Rydberg Atomic Receivers Using Six-Wave Mixing
-  authors: <strong>Yuanbin Chen</strong>, Chau Yuen, Chong Meng Samson See
-  conference: IEEE Journal on Selected Areas in Communications · 2026
+  authors: Yuanbin Chen, Chau Yuen, Chong Meng Samson See
+  conference: IEEE Journal on Selected Areas in Communications
   conference_short: JSAC
   year: 2026
   topics:
   - quantum-rf
   doi: https://doi.org/10.1109/JSAC.2026.3716945
-  bibtex: /bib/wideband-quantum-transduction.bib
+  bibtex: |-
+    @article{chen2026-wideband-quantum-transduction,
+      title = {{Wideband Quantum Transduction for Rydberg Atomic Receivers Using Six-Wave Mixing}},
+      author = {Yuanbin Chen and Chau Yuen and Chong Meng Samson See},
+      journal = {IEEE Journal on Selected Areas in Communications},
+      year = {2026},
+      volume = {44},
+      pages = {5472--5488},
+      doi = {10.1109/JSAC.2026.3716945},
+      url = {https://doi.org/10.1109/JSAC.2026.3716945}
+    }
   selected: true
   image: /assets/img/six-wave-mixing.webp
   image_alt: Six-level atomic transitions and the six-wave-mixing receiver setup
@@ -18,30 +32,49 @@ main:
   author_role: first
 - id: polarization-aware-doa
   title: Polarization-Aware DoA Detection Relying on a Single Rydberg Atomic Receiver
-  authors: <strong>Yuanbin Chen</strong>, Chau Yuen, Darmindra Arumugam, Chong Meng Samson See, Mérouane Debbah,
-    Lajos Hanzo
-  conference: IEEE Journal on Selected Areas in Communications · 2026
+  authors: Yuanbin Chen, Chau Yuen, Darmindra Arumugam, Chong Meng Samson See, Mérouane Debbah, Lajos Hanzo
+  conference: IEEE Journal on Selected Areas in Communications
   conference_short: JSAC
   year: 2026
   topics:
   - quantum-rf
   doi: https://doi.org/10.1109/JSAC.2026.3686343
-  bibtex: /bib/polarization-aware-doa.bib
+  bibtex: |-
+    @article{chen2026-polarization-aware-doa,
+      title = {{Polarization-Aware DoA Detection Relying on a Single Rydberg Atomic Receiver}},
+      author = {Yuanbin Chen and Chau Yuen and Darmindra Arumugam and Chong Meng Samson See and Mérouane Debbah and Lajos Hanzo},
+      journal = {IEEE Journal on Selected Areas in Communications},
+      year = {2026},
+      volume = {44},
+      pages = {4570--4584},
+      doi = {10.1109/JSAC.2026.3686343},
+      url = {https://doi.org/10.1109/JSAC.2026.3686343}
+    }
   pdf: https://arxiv.org/pdf/2508.17179
   summary: Uses the vector sensitivity of a single Rydberg vapor cell to estimate the direction and polarization
     of an incident RF field.
   author_role: first
 - id: harnessing-rydberg-receivers
   title: 'Harnessing Rydberg Atomic Receivers: From Quantum Physics to Wireless Communications'
-  authors: <strong>Yuanbin Chen</strong>, Xufeng Guo, Chau Yuen, Yufei Zhao, Yong Liang Guan, Chong Meng Samson
-    See, Mérouane Debbah, Lajos Hanzo
-  conference: IEEE Transactions on Wireless Communications · 2026
+  authors: Yuanbin Chen, Xufeng Guo, Chau Yuen, Yufei Zhao, Yong Liang Guan, Chong Meng Samson See, Mérouane Debbah,
+    Lajos Hanzo
+  conference: IEEE Transactions on Wireless Communications
   conference_short: TWC
   year: 2026
   topics:
   - quantum-rf
   doi: https://doi.org/10.1109/TWC.2026.3701846
-  bibtex: /bib/harnessing-rydberg-receivers.bib
+  bibtex: |-
+    @article{chen2026-harnessing-rydberg-receivers,
+      title = {{Harnessing Rydberg Atomic Receivers: From Quantum Physics to Wireless Communications}},
+      author = {Yuanbin Chen and Xufeng Guo and Chau Yuen and Yufei Zhao and Yong Liang Guan and Chong Meng Samson See and Mérouane Debbah and Lajos Hanzo},
+      journal = {IEEE Transactions on Wireless Communications},
+      year = {2026},
+      volume = {25},
+      pages = {19971--19990},
+      doi = {10.1109/TWC.2026.3701846},
+      url = {https://doi.org/10.1109/TWC.2026.3701846}
+    }
   selected: true
   image: /assets/img/rydberg-receiver.webp
   image_alt: Atomic energy levels and optical interrogation in a Rydberg receiver
@@ -51,26 +84,45 @@ main:
   author_role: first
 - id: ris-electromagnetic-joint-model
   title: Electromagnetic-Communication Joint Modeling and Application for RIS-Assisted Wireless Systems
-  authors: Xiaocun Zong, <strong>Yuanbin Chen</strong>, Fan Yang, Zhaocheng Wang, Zhijun Zhang, Shenheng Xu, Maokun
-    Li
-  conference: IEEE Journal of Selected Topics in Electromagnetics, Antennas and Propagation · 2026
+  authors: Xiaocun Zong, Yuanbin Chen, Fan Yang, Zhaocheng Wang, Zhijun Zhang, Shenheng Xu, Maokun Li
+  conference: IEEE Journal of Selected Topics in Electromagnetics, Antennas and Propagation
   conference_short: JSTEAP
   year: 2026
   topics:
   - ris-vehicular
   doi: https://doi.org/10.1109/JSTEAP.2026.3721014
-  bibtex: /bib/ris-electromagnetic-joint-model.bib
+  bibtex: |-
+    @article{chen2026-ris-electromagnetic-joint-model,
+      title = {{Electromagnetic-Communication Joint Modeling and Application for RIS-Assisted Wireless Systems}},
+      author = {Zong, Xiaocun and Chen, Yuanbin and Yang, Fan and Wang, Zhaocheng and Zhang, Zhijun and Xu, Shenheng and Li, Maokun},
+      journal = {IEEE Journal of Selected Topics in Electromagnetics, Antennas and Propagation},
+      year = {2026},
+      volume = {2},
+      pages = {462--476},
+      doi = {10.1109/JSTEAP.2026.3721014}
+    }
   author_role: coauthor
 - id: unified-holographic-mimo
   title: 'Unified Far-Field and Near-Field in Holographic MIMO: A Wavenumber-Domain Perspective'
-  authors: <strong>Yuanbin Chen</strong>, Xufeng Guo, Gui Zhou, Shi Jin, Derrick Wing Kwan Ng, Zhaocheng Wang
-  conference: IEEE Communications Magazine · 2025
+  authors: Yuanbin Chen, Xufeng Guo, Gui Zhou, Shi Jin, Derrick Wing Kwan Ng, Zhaocheng Wang
+  conference: IEEE Communications Magazine
   conference_short: ComMag
   year: 2025
   topics:
   - near-field-mimo
   doi: https://doi.org/10.1109/MCOM.001.2300845
-  bibtex: /bib/unified-holographic-mimo.bib
+  bibtex: |-
+    @article{chen2025-unified-holographic-mimo,
+      title = {{Unified Far-Field and Near-Field in Holographic MIMO: A Wavenumber-Domain Perspective}},
+      author = {Yuanbin Chen and Xufeng Guo and Gui Zhou and Shi Jin and Derrick Wing Kwan Ng and Zhaocheng Wang},
+      journal = {IEEE Communications Magazine},
+      year = {2025},
+      volume = {63},
+      number = {1},
+      pages = {30--36},
+      doi = {10.1109/MCOM.001.2300845},
+      url = {https://doi.org/10.1109/MCOM.001.2300845}
+    }
   selected: true
   image: /assets/img/holographic-wavenumber.webp
   image_alt: Electromagnetic fields with different wavenumbers
@@ -81,71 +133,133 @@ main:
   author_role: first
 - id: unified-near-far-paradigm
   title: New Paradigm for Unified Near-Field and Far-Field Wireless Communications
-  authors: Zhaocheng Wang, Haochen Wu, <strong>Yuanbin Chen</strong>, Liyang Lu
-  conference: IEEE Network · 2025
+  authors: Zhaocheng Wang, Haochen Wu, Yuanbin Chen, Liyang Lu
+  conference: IEEE Network
   conference_short: Network
   year: 2025
   topics:
   - near-field-mimo
   doi: https://doi.org/10.1109/MNET.2025.3541316
-  bibtex: /bib/unified-near-far-paradigm.bib
+  bibtex: |-
+    @article{chen2025-unified-near-far-paradigm,
+      title = {{New Paradigm for Unified Near-Field and Far-Field Wireless Communications}},
+      author = {Wang, Zhaocheng and Wu, Haochen and Chen, Yuanbin and Lu, Liyang},
+      journal = {IEEE Network},
+      year = {2025},
+      volume = {39},
+      number = {6},
+      pages = {112--118},
+      doi = {10.1109/MNET.2025.3541316}
+    }
   author_role: coauthor
   pdf: https://arxiv.org/pdf/2501.02730
 - id: holographic-channel-clustered-sparsity
   title: Statistical Channel Estimation for Holographic MIMO Exploiting the Clustered Sparsity
-  authors: Yuqing Guo, Xufeng Guo, <strong>Yuanbin Chen</strong>, Ying Wang
-  conference: IEEE Transactions on Vehicular Technology · 2025
+  authors: Yuqing Guo, Xufeng Guo, Yuanbin Chen, Ying Wang
+  conference: IEEE Transactions on Vehicular Technology
   conference_short: TVT
   year: 2025
   topics:
   - near-field-mimo
   doi: https://doi.org/10.1109/TVT.2025.3551299
-  bibtex: /bib/holographic-channel-clustered-sparsity.bib
+  bibtex: |-
+    @article{chen2025-holographic-channel-clustered-sparsity,
+      title = {{Statistical Channel Estimation for Holographic MIMO Exploiting the Clustered Sparsity}},
+      author = {Guo, Yuqing and Guo, Xufeng and Chen, Yuanbin and Wang, Ying},
+      journal = {IEEE Transactions on Vehicular Technology},
+      year = {2025},
+      volume = {74},
+      number = {8},
+      pages = {13161--13166},
+      doi = {10.1109/TVT.2025.3551299}
+    }
   author_role: coauthor
 - id: near-field-structured-sparsity
   title: 'Exploiting Structured Sparsity in Near Field: From the Perspective of Decomposition'
-  authors: Xufeng Guo, <strong>Yuanbin Chen</strong>, Ying Wang, Chau Yuen
-  conference: IEEE Communications Magazine · 2025
+  authors: Xufeng Guo, Yuanbin Chen, Ying Wang, Chau Yuen
+  conference: IEEE Communications Magazine
   conference_short: ComMag
   year: 2025
   topics:
   - near-field-mimo
   doi: https://doi.org/10.1109/MCOM.001.2300836
-  bibtex: /bib/near-field-structured-sparsity.bib
+  bibtex: |-
+    @article{chen2025-near-field-structured-sparsity,
+      title = {{Exploiting Structured Sparsity in Near Field: From the Perspective of Decomposition}},
+      author = {Guo, Xufeng and Chen, Yuanbin and Wang, Ying and Yuen, Chau},
+      journal = {IEEE Communications Magazine},
+      year = {2025},
+      volume = {63},
+      number = {1},
+      pages = {37--43},
+      doi = {10.1109/MCOM.001.2300836}
+    }
   author_role: coauthor
   pdf: https://arxiv.org/pdf/2406.18985
 - id: unifying-far-near-field
   title: Unifying Far-Field and Near-Field Wireless Communications in 6G MIMO
-  authors: <strong>Yuanbin Chen</strong>, Xufeng Guo, Zhaocheng Wang, Chau Yuen
-  conference: IEEE Wireless Communications Letters · 2024
+  authors: Yuanbin Chen, Xufeng Guo, Zhaocheng Wang, Chau Yuen
+  conference: IEEE Wireless Communications Letters
   conference_short: WCL
   year: 2024
   topics:
   - near-field-mimo
   doi: https://doi.org/10.1109/LWC.2024.3443880
-  bibtex: /bib/unifying-far-near-field.bib
+  bibtex: |-
+    @article{chen2024-unifying-far-near-field,
+      title = {{Unifying Far-Field and Near-Field Wireless Communications in 6G MIMO}},
+      author = {Yuanbin Chen and Xufeng Guo and Zhaocheng Wang and Chau Yuen},
+      journal = {IEEE Wireless Communications Letters},
+      year = {2024},
+      volume = {13},
+      number = {10},
+      pages = {2762--2766},
+      doi = {10.1109/LWC.2024.3443880},
+      url = {https://doi.org/10.1109/LWC.2024.3443880}
+    }
   author_role: first
 - id: holographic-mimo-systems
   title: 'Holographic Multiple-Input, Multiple-Output Systems: Their Channel Estimation and Performance'
-  authors: <strong>Yuanbin Chen</strong>, Ying Wang, Zhaocheng Wang, Ping Zhang
-  conference: IEEE Vehicular Technology Magazine · 2024
+  authors: Yuanbin Chen, Ying Wang, Zhaocheng Wang, Ping Zhang
+  conference: IEEE Vehicular Technology Magazine
   conference_short: VTM
   year: 2024
   topics:
   - near-field-mimo
   doi: https://ieeexplore.ieee.org/document/10557710/
-  bibtex: /bib/holographic-mimo-systems.bib
+  bibtex: |-
+    @article{chen2024-holographic-mimo-systems,
+      title = {{Holographic Multiple-Input, Multiple-Output Systems: Their Channel Estimation and Performance}},
+      author = {Yuanbin Chen and Ying Wang and Zhaocheng Wang and Ping Zhang},
+      journal = {IEEE Vehicular Technology Magazine},
+      year = {2024},
+      volume = {19},
+      number = {3},
+      pages = {48--57},
+      url = {https://ieeexplore.ieee.org/document/10557710/}
+    }
   author_role: first
 - id: angular-distance-estimation
   title: Angular-Distance Based Channel Estimation for Holographic MIMO
-  authors: <strong>Yuanbin Chen</strong>, Ying Wang, Zhaocheng Wang, Zhu Han
-  conference: IEEE Journal on Selected Areas in Communications · 2024
+  authors: Yuanbin Chen, Ying Wang, Zhaocheng Wang, Zhu Han
+  conference: IEEE Journal on Selected Areas in Communications
   conference_short: JSAC
   year: 2024
   topics:
   - near-field-mimo
   doi: https://doi.org/10.1109/JSAC.2024.3389116
-  bibtex: /bib/angular-distance-estimation.bib
+  bibtex: |-
+    @article{chen2024-angular-distance-estimation,
+      title = {{Angular-Distance Based Channel Estimation for Holographic MIMO}},
+      author = {Yuanbin Chen and Ying Wang and Zhaocheng Wang and Zhu Han},
+      journal = {IEEE Journal on Selected Areas in Communications},
+      year = {2024},
+      volume = {42},
+      number = {6},
+      pages = {1684--1702},
+      doi = {10.1109/JSAC.2024.3389116},
+      url = {https://doi.org/10.1109/JSAC.2024.3389116}
+    }
   selected: true
   image: /assets/img/angular-distance.webp
   image_alt: Holographic MIMO transmission and two-dimensional array geometry
@@ -156,156 +270,280 @@ main:
 - id: ris-vehicle-platoons
   title: 'Location Tracking for Reconfigurable Intelligent Surfaces Aided Vehicle Platoons: Diverse Sparsities Inspired
     Approaches'
-  authors: <strong>Yuanbin Chen</strong>, Y. Wang, X. Guo, Z. Han, P. Zhang
-  conference: IEEE Journal on Selected Areas in Communications · 2023
+  authors: Yuanbin Chen, Y. Wang, X. Guo, Z. Han, P. Zhang
+  conference: IEEE Journal on Selected Areas in Communications
   conference_short: JSAC
   year: 2023
   topics:
   - ris-vehicular
   doi: https://ieeexplore.ieee.org/document/10158691/
-  bibtex: /bib/ris-vehicle-platoons.bib
+  bibtex: |-
+    @article{chen2023-ris-vehicle-platoons,
+      title = {{Location Tracking for Reconfigurable Intelligent Surfaces Aided Vehicle Platoons: Diverse Sparsities Inspired Approaches}},
+      author = {Yuanbin Chen and Y. Wang and X. Guo and Z. Han and P. Zhang},
+      journal = {IEEE Journal on Selected Areas in Communications},
+      year = {2023},
+      volume = {41},
+      number = {8},
+      pages = {2476--2496},
+      url = {https://ieeexplore.ieee.org/document/10158691/}
+    }
   author_role: first
 - id: high-mobility-millimeter-wave
   title: Reconfigurable Intelligent Surface Aided High-Mobility Millimeter Wave Communications With Dynamic Dual-Structured
     Sparsity
-  authors: <strong>Yuanbin Chen</strong>, Y. Wang, Z. Wang
-  conference: IEEE Transactions on Wireless Communications · 2023
+  authors: Yuanbin Chen, Y. Wang, Z. Wang
+  conference: IEEE Transactions on Wireless Communications
   conference_short: TWC
   year: 2023
   topics:
   - ris-vehicular
   doi: https://ieeexplore.ieee.org/document/9984171/
-  bibtex: /bib/high-mobility-millimeter-wave.bib
+  bibtex: |-
+    @article{chen2023-high-mobility-millimeter-wave,
+      title = {{Reconfigurable Intelligent Surface Aided High-Mobility Millimeter Wave Communications With Dynamic Dual-Structured Sparsity}},
+      author = {Yuanbin Chen and Y. Wang and Z. Wang},
+      journal = {IEEE Transactions on Wireless Communications},
+      year = {2023},
+      volume = {22},
+      number = {7},
+      pages = {4580--4599},
+      url = {https://ieeexplore.ieee.org/document/9984171/}
+    }
   author_role: first
 - id: extremely-large-ris-estimation
   title: Near-Field Sparse Channel Estimation for Extremely Large-Scale RIS-Aided Wireless Communications
-  authors: Zixing Tang, <strong>Yuanbin Chen</strong>, Ying Wang, Tianqi Mao, Qingqing Wu, Marco Di Renzo, Lajos
-    Hanzo
-  conference: IEEE Global Communications Conference Workshops · 2023
+  authors: Zixing Tang, Yuanbin Chen, Ying Wang, Tianqi Mao, Qingqing Wu, Marco Di Renzo, Lajos Hanzo
+  conference: IEEE Global Communications Conference Workshops
   conference_short: GLOBECOM Wkshps
   year: 2023
   topics:
   - near-field-mimo
   - ris-vehicular
   doi: https://doi.org/10.1109/GCWkshps58843.2023.10464973
-  bibtex: /bib/extremely-large-ris-estimation.bib
+  bibtex: |-
+    @inproceedings{tangchen2023-xl-ris-estimation,
+      title = {{Near-Field Sparse Channel Estimation for Extremely Large-Scale RIS-Aided Wireless Communications}},
+      author = {Tang, Zixing and Chen, Yuanbin and Wang, Ying and Mao, Tianqi and Wu, Qingqing and Di Renzo, Marco and Hanzo, Lajos},
+      booktitle = {2023 IEEE Globecom Workshops (GC Wkshps)},
+      year = {2023},
+      pages = {1373--1379},
+      doi = {10.1109/GCWkshps58843.2023.10464973}
+    }
   notes: IEEE GLOBECOM Best Workshop Paper Award
   author_role: co-first
   pdf: https://arxiv.org/pdf/2311.07249
 - id: near-field-triple-parametric-estimation
   title: Compressed Channel Estimation for Near-Field XL-MIMO Using Triple Parametric Decomposition
-  authors: Xufeng Guo, <strong>Yuanbin Chen</strong>, Ying Wang
-  conference: IEEE Transactions on Vehicular Technology · 2023
+  authors: Xufeng Guo, Yuanbin Chen, Ying Wang
+  conference: IEEE Transactions on Vehicular Technology
   conference_short: TVT
   year: 2023
   topics:
   - near-field-mimo
   doi: https://doi.org/10.1109/TVT.2023.3279397
-  bibtex: /bib/near-field-triple-parametric-estimation.bib
+  bibtex: |-
+    @article{chen2023-near-field-triple-parametric-estimation,
+      title = {{Compressed Channel Estimation for Near-Field XL-MIMO Using Triple Parametric Decomposition}},
+      author = {Guo, Xufeng and Chen, Yuanbin and Wang, Ying},
+      journal = {IEEE Transactions on Vehicular Technology},
+      year = {2023},
+      pages = {1--6},
+      doi = {10.1109/TVT.2023.3279397}
+    }
   author_role: coauthor
 - id: ris-wireless-beacon-estimation
   title: Wireless Beacon Enabled Hybrid Sparse Channel Estimation for RIS-Aided mmWave Communications
-  authors: Xufeng Guo, <strong>Yuanbin Chen</strong>, Ying Wang
-  conference: IEEE Transactions on Communications · 2023
+  authors: Xufeng Guo, Yuanbin Chen, Ying Wang
+  conference: IEEE Transactions on Communications
   conference_short: TCOM
   year: 2023
   topics:
   - ris-vehicular
   doi: https://doi.org/10.1109/TCOMM.2023.3261385
-  bibtex: /bib/ris-wireless-beacon-estimation.bib
+  bibtex: |-
+    @article{chen2023-ris-wireless-beacon-estimation,
+      title = {{Wireless Beacon Enabled Hybrid Sparse Channel Estimation for RIS-Aided mmWave Communications}},
+      author = {Guo, Xufeng and Chen, Yuanbin and Wang, Ying},
+      journal = {IEEE Transactions on Communications},
+      year = {2023},
+      volume = {71},
+      number = {5},
+      pages = {3144--3160},
+      doi = {10.1109/TCOMM.2023.3261385}
+    }
   author_role: coauthor
 - id: active-ris-robust-beamforming
   title: Robust Beamforming for Active Reconfigurable Intelligent Omni-Surface in Vehicular Communications
-  authors: <strong>Yuanbin Chen</strong>, Y. Wang, Z. Wang, P. Zhang
-  conference: IEEE Journal on Selected Areas in Communications · 2022
+  authors: Yuanbin Chen, Y. Wang, Z. Wang, P. Zhang
+  conference: IEEE Journal on Selected Areas in Communications
   conference_short: JSAC
   year: 2022
   topics:
   - ris-vehicular
   doi: https://ieeexplore.ieee.org/document/9851661/
-  bibtex: /bib/active-ris-robust-beamforming.bib
+  bibtex: |-
+    @article{chen2022-active-ris-robust-beamforming,
+      title = {{Robust Beamforming for Active Reconfigurable Intelligent Omni-Surface in Vehicular Communications}},
+      author = {Yuanbin Chen and Y. Wang and Z. Wang and P. Zhang},
+      journal = {IEEE Journal on Selected Areas in Communications},
+      year = {2022},
+      volume = {40},
+      number = {10},
+      pages = {3086--3103},
+      url = {https://ieeexplore.ieee.org/document/9851661/}
+    }
   author_role: first
 - id: ris-vehicular-networks
   title: 'Reconfigurable Intelligent Surface (RIS)-Aided Vehicular Networks: Their Protocols, Resource Allocation,
     and Performance'
-  authors: <strong>Yuanbin Chen</strong>, Y. Wang, J. Zhang, P. Zhang, L. Hanzo
-  conference: IEEE Vehicular Technology Magazine · 2022
+  authors: Yuanbin Chen, Y. Wang, J. Zhang, P. Zhang, L. Hanzo
+  conference: IEEE Vehicular Technology Magazine
   conference_short: VTM
   year: 2022
   topics:
   - ris-vehicular
   doi: https://ieeexplore.ieee.org/document/9744412/
-  bibtex: /bib/ris-vehicular-networks.bib
+  bibtex: |-
+    @article{chen2022-ris-vehicular-networks,
+      title = {{Reconfigurable Intelligent Surface (RIS)-Aided Vehicular Networks: Their Protocols, Resource Allocation, and Performance}},
+      author = {Yuanbin Chen and Y. Wang and J. Zhang and P. Zhang and L. Hanzo},
+      journal = {IEEE Vehicular Technology Magazine},
+      year = {2022},
+      volume = {17},
+      number = {2},
+      pages = {26--36},
+      url = {https://ieeexplore.ieee.org/document/9744412/}
+    }
   author_role: first
 - id: robust-transmission-statistical-csi
   title: Robust Transmission for Reconfigurable Intelligent Surface Aided Millimeter Wave Vehicular Communications
     With Statistical CSI
-  authors: <strong>Yuanbin Chen</strong>, Y. Wang, L. Jiao
-  conference: IEEE Transactions on Wireless Communications · 2022
+  authors: Yuanbin Chen, Y. Wang, L. Jiao
+  conference: IEEE Transactions on Wireless Communications
   conference_short: TWC
   year: 2022
   topics:
   - ris-vehicular
   doi: https://ieeexplore.ieee.org/document/9505311/
-  bibtex: /bib/robust-transmission-statistical-csi.bib
+  bibtex: |-
+    @article{chen2022-robust-transmission-statistical-csi,
+      title = {{Robust Transmission for Reconfigurable Intelligent Surface Aided Millimeter Wave Vehicular Communications With Statistical CSI}},
+      author = {Yuanbin Chen and Y. Wang and L. Jiao},
+      journal = {IEEE Transactions on Wireless Communications},
+      year = {2022},
+      volume = {21},
+      number = {2},
+      pages = {928--944},
+      url = {https://ieeexplore.ieee.org/document/9505311/}
+    }
   notes: ESI Highly Cited Paper
   author_role: first
 - id: qos-driven-spectrum-sharing
   title: QoS-Driven Spectrum Sharing for Reconfigurable Intelligent Surfaces (RISs) Aided Vehicular Networks
-  authors: <strong>Yuanbin Chen</strong>, Y. Wang, J. Zhang, M. Di Renzo
-  conference: IEEE Transactions on Wireless Communications · 2021
+  authors: Yuanbin Chen, Y. Wang, J. Zhang, M. Di Renzo
+  conference: IEEE Transactions on Wireless Communications
   conference_short: TWC
   year: 2021
   topics:
   - ris-vehicular
   doi: https://ieeexplore.ieee.org/document/9403921/
-  bibtex: /bib/qos-driven-spectrum-sharing.bib
+  bibtex: |-
+    @article{chen2021-qos-driven-spectrum-sharing,
+      title = {{QoS-Driven Spectrum Sharing for Reconfigurable Intelligent Surfaces (RISs) Aided Vehicular Networks}},
+      author = {Yuanbin Chen and Y. Wang and J. Zhang and M. Di Renzo},
+      journal = {IEEE Transactions on Wireless Communications},
+      year = {2021},
+      volume = {20},
+      number = {9},
+      pages = {5969--5985},
+      url = {https://ieeexplore.ieee.org/document/9403921/}
+    }
   author_role: first
 - id: ris-uav-secure-transmission
   title: Learning-Based Robust and Secure Transmission for Reconfigurable Intelligent Surface Aided Millimeter Wave
     UAV Communications
-  authors: Xufeng Guo, <strong>Yuanbin Chen</strong>, Ying Wang
-  conference: IEEE Wireless Communications Letters · 2021
+  authors: Xufeng Guo, Yuanbin Chen, Ying Wang
+  conference: IEEE Wireless Communications Letters
   conference_short: WCL
   year: 2021
   topics:
   - ris-vehicular
   doi: https://doi.org/10.1109/LWC.2021.3081464
-  bibtex: /bib/ris-uav-secure-transmission.bib
+  bibtex: |-
+    @article{chen2021-ris-uav-secure-transmission,
+      title = {{Learning-Based Robust and Secure Transmission for Reconfigurable Intelligent Surface Aided Millimeter Wave UAV Communications}},
+      author = {Guo, Xufeng and Chen, Yuanbin and Wang, Ying},
+      journal = {IEEE Wireless Communications Letters},
+      year = {2021},
+      volume = {10},
+      number = {8},
+      pages = {1795--1799},
+      doi = {10.1109/LWC.2021.3081464}
+    }
   author_role: coauthor
 - id: uav-trajectory-resource-allocation
   title: Joint Resource Allocation and UAV Trajectory Optimization for Space–Air–Ground Internet of Remote Things
     Networks
-  authors: Ying Wang, Zhendong Li, <strong>Yuanbin Chen</strong>, Man Liu, Xinpeng Lyu, Xiangwang Hou, Jingjing
-    Wang
-  conference: IEEE Systems Journal · 2021
+  authors: Ying Wang, Zhendong Li, Yuanbin Chen, Man Liu, Xinpeng Lyu, Xiangwang Hou, Jingjing Wang
+  conference: IEEE Systems Journal
   conference_short: Systems Journal
   year: 2021
   topics:
   - ris-vehicular
   doi: https://doi.org/10.1109/JSYST.2020.3019463
-  bibtex: /bib/uav-trajectory-resource-allocation.bib
+  bibtex: |-
+    @article{chen2021-uav-trajectory-resource-allocation,
+      title = {{Joint Resource Allocation and UAV Trajectory Optimization for Space–Air–Ground Internet of Remote Things Networks}},
+      author = {Wang, Ying and Li, Zhendong and Chen, Yuanbin and Liu, Man and Lyu, Xinpeng and Hou, Xiangwang and Wang, Jingjing},
+      journal = {IEEE Systems Journal},
+      year = {2021},
+      volume = {15},
+      number = {4},
+      pages = {4745--4755},
+      doi = {10.1109/JSYST.2020.3019463}
+    }
   author_role: coauthor
 - id: ris-resource-allocation
   title: Resource Allocation for Intelligent Reflecting Surface Aided Vehicular Communications
-  authors: <strong>Yuanbin Chen</strong>, Y. Wang, J. Zhang, Z. Li
-  conference: IEEE Transactions on Vehicular Technology · 2020
+  authors: Yuanbin Chen, Y. Wang, J. Zhang, Z. Li
+  conference: IEEE Transactions on Vehicular Technology
   conference_short: TVT
   year: 2020
   topics:
   - ris-vehicular
   doi: https://ieeexplore.ieee.org/document/9144463/
-  bibtex: /bib/ris-resource-allocation.bib
+  bibtex: |-
+    @article{chen2020-ris-resource-allocation,
+      title = {{Resource Allocation for Intelligent Reflecting Surface Aided Vehicular Communications}},
+      author = {Yuanbin Chen and Y. Wang and J. Zhang and Z. Li},
+      journal = {IEEE Transactions on Vehicular Technology},
+      year = {2020},
+      volume = {69},
+      number = {10},
+      pages = {12321--12326},
+      url = {https://ieeexplore.ieee.org/document/9144463/}
+    }
   author_role: first
 - id: network-slicing-vehicular
   title: Network Slicing Enabled Resource Management for Service-Oriented Ultra-Reliable and Low-Latency Vehicular
     Networks
-  authors: <strong>Yuanbin Chen</strong>, Y. Wang, M. Liu, J. Zhang, L. Jiao
-  conference: IEEE Transactions on Vehicular Technology · 2020
+  authors: Yuanbin Chen, Y. Wang, M. Liu, J. Zhang, L. Jiao
+  conference: IEEE Transactions on Vehicular Technology
   conference_short: TVT
   year: 2020
   topics:
   - ris-vehicular
   doi: https://ieeexplore.ieee.org/document/9084239/
-  bibtex: /bib/network-slicing-vehicular.bib
+  bibtex: |-
+    @article{chen2020-network-slicing-vehicular,
+      title = {{Network Slicing Enabled Resource Management for Service-Oriented Ultra-Reliable and Low-Latency Vehicular Networks}},
+      author = {Yuanbin Chen and Y. Wang and M. Liu and J. Zhang and L. Jiao},
+      journal = {IEEE Transactions on Vehicular Technology},
+      year = {2020},
+      volume = {69},
+      number = {7},
+      pages = {7847--7862},
+      url = {https://ieeexplore.ieee.org/document/9084239/}
+    }
   author_role: first

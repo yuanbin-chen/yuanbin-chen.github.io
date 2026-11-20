@@ -4,27 +4,36 @@
 <ul class="bibliography" role="list">
 {% endif %}
 {% for paper in include.papers %}
-  {% assign paper_link = paper.doi %}
-  {% if paper_link == nil and paper.page %}{% assign paper_link = paper.page | relative_url %}{% endif %}
-  <li id="{{ paper.id | escape }}"{% if include.numbered %} value="{{ forloop.index }}"{% endif %}{% if include.featured and paper.image %} class="featured-publication"{% endif %} data-publication data-author-role="{{ paper.author_role | escape }}">
-    {% if include.featured and paper.image %}
+  {% assign paper_link = paper.doi | default: paper.page %}
+  {% assign paper_id = paper.id | default: paper.title | slugify %}
+  <li id="{{ paper_id | escape }}"{% if include.numbered %} value="{{ forloop.index }}"{% endif %}{% if include.featured and paper.image and paper.image != '' %} class="featured-publication"{% endif %} data-publication data-author-role="{{ paper.author_role | escape }}">
+    {% if include.featured and paper.image and paper.image != '' %}
       <img class="publication-figure" src="{{ paper.image | relative_url | escape }}" alt="{{ paper.image_alt | default: paper.title | escape }}" loading="lazy">
     {% endif %}
     <div class="publication-entry">
       <p class="publication-title">
-        {% if paper_link %}<a href="{{ paper_link | escape }}">{{ paper.title | escape }}</a>{% else %}{{ paper.title | escape }}{% endif %}
+        {% if paper_link and paper_link != '' %}<a href="{{ paper_link | relative_url | escape }}">{{ paper.title | escape }}</a>{% else %}{{ paper.title | escape }}{% endif %}
       </p>
-      <p class="publication-byline">{{ paper.authors }}</p>
+      <p class="publication-byline">
+        {%- assign authors = paper.authors | split: ', ' -%}
+        {%- for author in authors -%}
+          {%- if author == site.data.profile.title -%}<strong>{{ author | escape }}</strong>{%- else -%}{{ author | escape }}{%- endif -%}
+          {%- unless forloop.last -%}{{ ', ' }}{%- endunless -%}
+        {%- endfor -%}
+      </p>
       <div class="publication-meta">
-        <cite>{{ paper.conference }}</cite>
+        <cite>{{ paper.conference | escape }} · {{ paper.year | escape }}</cite>
         {% if paper.author_role == 'co-first' %}<span class="publication-authorship">Co-first author</span>{% endif %}
         <span class="publication-resource-links">
-          {% if paper.doi %}<a href="{{ paper.doi | escape }}">Paper</a>{% endif %}
-          {% if paper.pdf %}<a href="{{ paper.pdf | relative_url | escape }}">arXiv PDF</a>{% endif %}
-          {% if paper.code %}<a href="{{ paper.code | relative_url | escape }}">Code</a>{% endif %}
-          {% if paper.page %}<a href="{{ paper.page | relative_url | escape }}">Project Page</a>{% endif %}
-          {% if paper.data %}<a href="{{ paper.data | relative_url | escape }}">Dataset</a>{% endif %}
-          {% if paper.bibtex %}<a href="{{ paper.bibtex | relative_url | escape }}" data-bibtex-link data-paper-title="{{ paper.title | strip_html | escape }}">BibTeX</a>{% endif %}
+          {% if paper.doi and paper.doi != '' %}<a href="{{ paper.doi | escape }}">Paper</a>{% endif %}
+          {% if paper.pdf and paper.pdf != '' %}<a href="{{ paper.pdf | relative_url | escape }}">arXiv PDF</a>{% endif %}
+          {% if paper.code and paper.code != '' %}<a href="{{ paper.code | relative_url | escape }}">Code</a>{% endif %}
+          {% if paper.page and paper.page != '' %}<a href="{{ paper.page | relative_url | escape }}">Project Page</a>{% endif %}
+          {% if paper.data and paper.data != '' %}<a href="{{ paper.data | relative_url | escape }}">Dataset</a>{% endif %}
+          {% if paper.bibtex and paper.bibtex != '' %}
+            {% assign citation = paper.bibtex | url_encode | replace: '+', '%20' %}
+            <a href="data:application/x-bibtex;charset=utf-8,{{ citation }}" download="{{ paper_id | escape }}.bib" data-bibtex-link data-paper-title="{{ paper.title | escape }}">BibTeX</a>
+          {% endif %}
         </span>
         {% if scholar_snapshot_valid and paper.scholar_id %}
           {% assign scholar_article = scholar_stats.articles[paper.scholar_id] %}
@@ -34,10 +43,10 @@
             <a class="publication-citations" href="{% if scholar_article.cited_by_url %}{{ scholar_article.cited_by_url | escape }}{% else %}https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user={{ scholar_stats.profile_id | url_encode }}&amp;citation_for_view={{ paper.scholar_id | url_encode }}{% endif %}" target="_blank" rel="noopener noreferrer" title="Google Scholar citations · checked {{ scholar_stats.updated | date: '%B %-d, %Y' }}">Cited by {{ article_citation_count }}</a>
           {% endif %}
         {% endif %}
-        {% if paper.notes %}<strong class="publication-note">{{ paper.notes | escape }}</strong>{% endif %}
-        {% if paper.others %}{{ paper.others }}{% endif %}
+        {% if paper.notes and paper.notes != '' %}<strong class="publication-note">{{ paper.notes | escape }}</strong>{% endif %}
+        {% if paper.others and paper.others != '' %}{{ paper.others | escape }}{% endif %}
       </div>
-      {% if include.featured and paper.summary %}
+      {% if include.featured and paper.summary and paper.summary != '' %}
         <p class="publication-summary">{{ paper.summary | escape }}</p>
       {% endif %}
     </div>

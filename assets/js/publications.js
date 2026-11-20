@@ -4,7 +4,7 @@
     if (!root) return;
 
     const dialog = document.getElementById("publication-bibtex-dialog");
-    if (!dialog || typeof dialog.showModal !== "function" || typeof window.fetch !== "function") return;
+    if (!dialog || typeof dialog.showModal !== "function") return;
 
     const closeButton = dialog.querySelector("[data-bibtex-close]");
     const title = dialog.querySelector("[data-bibtex-title]");
@@ -16,8 +16,7 @@
 
     const copyLabel = copyButton.textContent;
     let opener = null;
-    let requestId = 0;
-    let controller = null;
+    let dialogSession = 0;
     let bibtex = "";
     let copyTimer = null;
 
@@ -27,74 +26,41 @@
       copyButton.textContent = copyLabel;
     }
 
-    function cancelRequest() {
-      requestId += 1;
-      if (controller) controller.abort();
-      controller = null;
-      bibtex = "";
-      copyButton.disabled = true;
-      resetCopyFeedback();
-      dialog.removeAttribute("aria-busy");
-    }
-
-    async function loadBibtex(url, id) {
-      const options = { credentials: "same-origin", redirect: "error" };
-      if (controller) options.signal = controller.signal;
-      try {
-        const response = await window.fetch(url.href, options);
-        if (!response.ok) throw new Error("BibTeX request failed.");
-        const text = await response.text();
-        if (!text.trim()) throw new Error("The BibTeX file is empty.");
-        if (id !== requestId || !dialog.open) return;
-        bibtex = text;
-        content.textContent = text;
-        copyButton.disabled = false;
-        status.textContent = "Ready to copy or download.";
-      } catch (error) {
-        if (id !== requestId || !dialog.open) return;
-        content.textContent = "";
-        status.textContent = "Could not load BibTeX. Use Download to open the original file.";
-      } finally {
-        if (id === requestId && dialog.open) dialog.removeAttribute("aria-busy");
-      }
-    }
+    const citationPrefix = "data:application/x-bibtex;charset=utf-8,";
 
     root.querySelectorAll("a[data-bibtex-link]").forEach(function (link) {
       link.addEventListener("click", function (event) {
         if (event.defaultPrevented || event.button !== 0 || event.ctrlKey || event.metaKey
             || event.shiftKey || event.altKey) return;
-        let url;
-        try {
-          url = new URL(link.href, document.baseURI);
-        } catch (error) {
-          return;
-        }
-        if (url.origin !== window.location.origin || !/^https?:$/.test(url.protocol)) return;
+        const href = link.getAttribute("href");
+        if (!href || !href.startsWith(citationPrefix)) return;
 
-        // Keep the original link usable if the dialog cannot be opened.
+        let citation;
         try {
+          citation = decodeURIComponent(href.slice(citationPrefix.length));
+          if (!citation.trim()) return;
           if (!dialog.open) dialog.showModal();
         } catch (error) {
           return;
         }
+
         event.preventDefault();
-        cancelRequest();
+        dialogSession += 1;
+        resetCopyFeedback();
         opener = link;
+        bibtex = citation;
         title.textContent = link.dataset.paperTitle || "BibTeX";
-        content.textContent = "";
-        status.textContent = "Loading BibTeX…";
-        download.href = url.href;
-        download.setAttribute("download", url.pathname.split("/").pop().replace(/\.txt$/i, ".bib"));
-        download.hidden = false;
-        dialog.setAttribute("aria-busy", "true");
-        controller = typeof window.AbortController === "function" ? new AbortController() : null;
-        loadBibtex(url, requestId);
+        content.textContent = citation;
+        copyButton.disabled = false;
+        status.textContent = "Ready to copy or download.";
+        download.href = href;
+        download.download = link.download;
       });
     });
 
     copyButton.addEventListener("click", async function () {
       if (!dialog.open || !bibtex || copyButton.disabled) return;
-      const id = requestId;
+      const id = dialogSession;
       const text = bibtex;
       resetCopyFeedback();
       copyButton.disabled = true;
@@ -103,14 +69,14 @@
           throw new Error("Clipboard access is unavailable.");
         }
         await navigator.clipboard.writeText(text);
-        if (id !== requestId || !dialog.open) return;
+        if (id !== dialogSession || !dialog.open) return;
         copyButton.textContent = "Copied";
         status.textContent = "BibTeX copied to clipboard.";
         copyTimer = window.setTimeout(function () {
-          if (id === requestId) resetCopyFeedback();
+          if (id === dialogSession) resetCopyFeedback();
         }, 2000);
       } catch (error) {
-        if (id !== requestId || !dialog.open) return;
+        if (id !== dialogSession || !dialog.open) return;
         try {
           content.tabIndex = 0;
           content.focus();
@@ -125,7 +91,7 @@
           status.textContent = "Automatic copy is unavailable. Select the BibTeX text and copy it manually, or use Download.";
         }
       } finally {
-        if (id === requestId && dialog.open) copyButton.disabled = false;
+        if (id === dialogSession && dialog.open) copyButton.disabled = false;
       }
     });
 
@@ -143,7 +109,10 @@
     // Native Escape handling closes the dialog and reaches this same cleanup.
     dialog.addEventListener("close", function () {
       if (dialog.open) return;
-      cancelRequest();
+      dialogSession += 1;
+      bibtex = "";
+      copyButton.disabled = true;
+      resetCopyFeedback();
       if (opener && opener.isConnected) opener.focus();
       opener = null;
     });

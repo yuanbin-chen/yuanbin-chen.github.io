@@ -1,0 +1,27 @@
+heading: Professional Services
+description: Editorial roles, workshop and tutorial organization, and technical program committees.
+sections:
+- title: Editorial service
+  id: editorial-service
+  body: |-
+    ### Lead Guest Editor
+
+    - **IEEE Wireless Communications**. [Atomic-to-Network: Quantum Radio Front-Ends for 6G Wireless Communications and Sensing](https://www.comsoc.org/publications/magazines/ieee-wireless-communications/cfp/atomic-network-quantum-radio-front-ends-6g-wireless-communications-and-sensing).
+    - **IEEE Communications Magazine**. [The Upper Mid-Band (FR3) for 6G: Technologies, Systems, and Deployment](https://www.comsoc.org/publications/magazines/ieee-communications-magazine/cfp/upper-mid-band-fr3-6g-technologies-systems-and-deployment).
+    - **Space: Science & Technology**. [Atomic-to-Space: Quantum Sensors for Spaceborne Communications and Sensing](https://spj.science.org/page/space/si/atomic-to-space).
+- title: Conference service
+  id: conference-service
+  body: |-
+    ### Workshop chair
+
+    - **IEEE PIMRC 2026**. Next-Generation Wireless Communication and Sensing Systems Powered by Quantum Information Technologies.
+
+    ### Tutorial organizer and presenter
+
+    - **IEEE PIMRC 2026**. Rydberg Atomic Quantum Receivers for Future Communication and Sensing: Models, Performance, Applications, and Challenges.
+    - **IEEE GLOBECOM 2026**. Rydberg Atomic Quantum Receivers for Future Communication and Sensing.
+
+    ### Technical program committee
+
+    - **IEEE ICC 2027**. Reconfigurable Intelligent Surfaces and Flexible-Antenna Technologies.
+    - **IEEE GLOBECOM 2026**. Green Communications Systems and Networks Symposium.

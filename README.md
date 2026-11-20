@@ -1,23 +1,30 @@
 # Yuanbin Chen · Academic Homepage
 
-Jekyll site for `https://yuanbin-chen.github.io/`, adapted from [Shaoyan Liu’s Academic Homepage](https://github.com/shaoyanliu/academic-homepage). See `THIRD_PARTY_NOTICES.md` for upstream and bundled library credits.
+Jekyll site for [yuanbin-chen.github.io](https://yuanbin-chen.github.io/), adapted from [Shaoyan Liu’s Academic Homepage](https://github.com/shaoyanliu/academic-homepage). See `THIRD_PARTY_NOTICES.md` for upstream and bundled library credits.
 
-## Update the site
+## Edit content with Pages CMS
 
-| Content | Location |
-| --- | --- |
-| Name, affiliation, email, profiles, portrait, and CV path | `_config.yml` |
-| Homepage introduction and links to research interests | `index.md` and `_data/research_interests.yml` |
-| Full biography | `bio.md` |
-| Homepage news and the News page | `_data/news.yml` |
-| Research descriptions and figures | `research.md` and `assets/img/` |
-| Papers, featured papers, and topics | `_data/publications.yml`, `_data/publication_topics.yml`, and `bib/` |
-| Honors, academic services, and research projects | `honors.md`, `services.md`, and `projects.md` |
-| Public CV and PDF reader headings | `cv/yuanbin-chen-cv.pdf` and `_data/cv_sections.yml` |
+1. Sign in to [Pages CMS](https://app.pagescms.org/) with GitHub.
+2. Install Pages CMS for the `yuanbin-chen/yuanbin-chen.github.io` repository. Open that repository and select its `master` branch.
+3. Select a form, make your changes, and save. GitHub Pages deploys each saved change through the repository’s Actions workflow.
 
-A paper appears on the homepage when its record has `selected: true`. Use `image`, `image_alt`, and `summary` for its homepage illustration and description. Each publication `id` also serves as its page anchor. Set `author_role` to `first`, `co-first`, or `coauthor`. The first-author list includes papers with shared first authorship. The CV is a public copy with personal phone numbers and citizenship removed. Use a public copy when replacing it.
+| Form | Content | Source |
+| --- | --- | --- |
+| Profile and contact | Name, university, portrait, emails, profiles, position, and public CV PDF | `_data/profile.yml` |
+| Home | Introduction, homepage headings, and the number of news items shown | `_data/home.yml` |
+| Bio | Full biography | `_data/bio.yml` |
+| Research | Research topics, related papers, figures, and education | `_data/research.yml` |
+| Publications | Papers, author roles, links, BibTeX, and homepage selections | `_data/publications.yml` |
+| Projects | Project names, roles, dates, descriptions, and links | `_data/projects.yml` |
+| Honors and awards | Awards and dates | `_data/honors.yml` |
+| Professional services | Editorial and conference service | `_data/services.yml` |
+| News | Announcements, deadlines, and links | `_data/news.yml` |
+| Navigation | Top menu labels, order, and links | `_data/navigation.yml` |
+| CV reader | CV page heading and PDF section bookmarks | `_data/cv_sections.yml` |
 
-Add news items at the top of `_data/news.yml` using `month: "YYYY-MM"` and a title. The description, link, link label, and submission deadline are optional. The homepage shows the first three items and the News page lists all items.
+- Research topic titles also update the homepage. There is one list of news items, sorted by month. The homepage shows the latest items up to the count set in Home.
+- In Publications, select **First author**, **Co-first author**, or **Non-first author**. Co-first papers appear in the first-author group. Enable **Show on the homepage** and add a figure and summary for a selected publication. Drag papers to change their order. Keep the link ID of an existing entry so its links continue working.
+- Use **Images** to upload a portrait or figure. Upload a public copy of the CV under **CV PDFs**, then select the file in **Profile and contact**. Set section bookmarks in **CV reader** if the PDF headings have changed.
 
 ## Preview with Jekyll
 
@@ -32,4 +39,4 @@ Open `http://localhost:4000/`. The HTTP preview supports the embedded PDF reader
 
 ## GitHub Pages
 
-The included GitHub Actions workflow builds the default branch. After reviewing the preview, install the source in the existing personal site repository. In **Settings → Pages → Build and deployment**, select **GitHub Actions**. The root-domain configuration uses an empty `baseurl` and retains the main `/publications/` and `/cv/` routes.
+The included GitHub Actions workflow builds the default branch. In **Settings → Pages → Build and deployment**, select **GitHub Actions**. The root-domain configuration uses an empty `baseurl`.

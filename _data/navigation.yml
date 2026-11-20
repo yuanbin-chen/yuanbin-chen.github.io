@@ -1,18 +1,17 @@
-# The template renders these items in reverse order.
 main:
-  - title: News
-    url: /news/
-  - title: Professional Services
-    url: /services/
-  - title: Honors and Awards
-    url: /honors/
-  - title: Project
-    url: /projects/
-  - title: Publication
-    url: /publications/
-  - title: Research
-    url: /research/
-  - title: Bio
-    url: /bio/
-  - title: Home
-    url: /
+- title: Home
+  url: /
+- title: Bio
+  url: /bio/
+- title: Research
+  url: /research/
+- title: Publication
+  url: /publications/
+- title: Project
+  url: /projects/
+- title: Honors and Awards
+  url: /honors/
+- title: Professional Services
+  url: /services/
+- title: News
+  url: /news/

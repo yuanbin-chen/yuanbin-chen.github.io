@@ -1,12 +1,12 @@
 <div class="{{ include.class | default: 'profile-nav' | escape }}" role="group" aria-label="Contact and academic profiles">
-  {% if site.email and site.email != '' %}
-  <a href="mailto:{{ site.email | escape }}" aria-label="Email {{ site.title | escape }}" title="Email"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
+  {% if site.data.profile.email and site.data.profile.email != '' %}
+  <a href="mailto:{{ site.data.profile.email | escape }}" aria-label="Email {{ site.data.profile.title | escape }}" title="Email"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
   {% endif %}
-  {% if site.orcid and site.orcid != '' %}
-  <a href="{{ site.orcid | relative_url | escape }}" aria-label="ORCID" title="ORCID" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-orcid" aria-hidden="true"></i></a>
+  {% if site.data.profile.orcid and site.data.profile.orcid != '' %}
+  <a href="{{ site.data.profile.orcid | relative_url | escape }}" aria-label="ORCID" title="ORCID" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-orcid" aria-hidden="true"></i></a>
   {% endif %}
-  {% if site.google_scholar and site.google_scholar != '' %}
-  <a href="{{ site.google_scholar | relative_url | escape }}" aria-label="Google Scholar profile" title="Google Scholar" target="_blank" rel="noopener noreferrer"><i class="ai ai-google-scholar" aria-hidden="true"></i></a>
+  {% if site.data.profile.google_scholar and site.data.profile.google_scholar != '' %}
+  <a href="{{ site.data.profile.google_scholar | relative_url | escape }}" aria-label="Google Scholar profile" title="Google Scholar" target="_blank" rel="noopener noreferrer"><i class="ai ai-google-scholar" aria-hidden="true"></i></a>
   {% endif %}
   {% if site.github_link and site.github_link != '' %}
   <a href="{{ site.github_link | relative_url | escape }}" aria-label="GitHub" title="GitHub" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i></a>

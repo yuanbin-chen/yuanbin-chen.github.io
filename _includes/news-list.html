@@ -1,6 +1,11 @@
-{% assign news_limit = include.limit | default: site.data.news.size %}
+{% assign news_limit = include.limit | default: site.data.news.items.size %}
+{% assign news_months = site.data.news.items | group_by: 'month' | sort: 'name' | reverse %}
+{% assign ordered_news = '' | split: ',' %}
+{% for month in news_months %}
+  {% assign ordered_news = ordered_news | concat: month.items %}
+{% endfor %}
 <ul class="news-updates">
-  {% for item in site.data.news limit: news_limit %}
+  {% for item in ordered_news limit: news_limit %}
     <li class="news-entry">
       <time datetime="{{ item.month | escape }}">{{ item.month | append: '-01' | date: "%b %Y" }}</time>
       <div class="news-entry-content">
@@ -9,7 +14,7 @@
           <p class="news-entry-detail">
             {{ item.description | escape }}
             {% if item.deadline %}<span class="news-deadline">Submission deadline {{ item.deadline | escape }}.</span>{% endif %}
-            {% if item.url %}<a href="{{ item.url | escape }}">{{ item.link_label | default: 'Details' | escape }}</a>{% endif %}
+            {% if item.url %}<a href="{{ item.url | relative_url | escape }}">{{ item.link_label | default: 'Details' | escape }}</a>{% endif %}
           </p>
         {% endif %}
       </div>

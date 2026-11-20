@@ -1,36 +1,23 @@
 ---
 layout: default
 title: Project
-description: Selected research projects on Rydberg RF sensing, holographic radio, network optimization, and RIS-aided vehicular networks.
+editorial: projects
 permalink: /projects/
 full_width: true
 ---
 
-# Research Projects
+{% assign projects = site.data.projects %}
+<h1 id="research-projects">{{ projects.heading | escape }}</h1>
 
+{% for project in projects.items %}
 <article class="project-entry">
-  <h2>Rydberg RF Sensing</h2>
-  <p class="project-meta">Lead Scientist · 2025–2028</p>
-  <p>Investigates Rydberg atomic receivers for radio-frequency sensing, including wideband RF-to-optical transduction and the estimation of polarization and direction of arrival.</p>
-  <p><a href="{{ '/research/#quantum-rf' | relative_url }}">Quantum sensing research</a></p>
+  <h2>{{ project.title | escape }}</h2>
+  {% if project.role or project.dates %}
+  <p class="project-meta">{{ project.role | escape }}{% if project.role and project.dates %} · {% endif %}{{ project.dates | escape }}</p>
+  {% endif %}
+  {{ project.description | markdownify }}
+  {% if project.link_url and project.link_url != '' %}
+  <p><a href="{{ project.link_url | relative_url | escape }}">{{ project.link_label | default: 'Project details' | escape }}</a></p>
+  {% endif %}
 </article>
-
-<article class="project-entry">
-  <h2>5G Network Modeling and Optimization</h2>
-  <p class="project-meta">Technical Member · 2023–2027</p>
-  <p>Contributes mathematical modeling and algorithm design for resource allocation and optimization in 5G networks.</p>
-</article>
-
-<article class="project-entry">
-  <h2>RIS-Empowered 6G Vehicular Networks</h2>
-  <p class="project-meta">Principal Investigator · 2022–2024</p>
-  <p>Studies channel estimation, transmission design, and resource allocation for RIS-assisted links under high mobility.</p>
-  <p><a href="{{ '/research/#reconfigurable-intelligent-surfaces' | relative_url }}">RIS research</a></p>
-</article>
-
-<article class="project-entry">
-  <h2>Integrated Sensing and Communication, AI/ML, and Holographic Radio</h2>
-  <p class="project-meta">Technical Member · 2022–2023</p>
-  <p>Worked on holographic radio technologies during my research visit to Tsinghua University.</p>
-  <p><a href="{{ '/research/#near-field-mimo' | relative_url }}">XL-MIMO and holographic MIMO research</a></p>
-</article>
+{% endfor %}
