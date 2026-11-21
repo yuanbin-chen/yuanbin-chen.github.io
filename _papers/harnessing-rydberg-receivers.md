@@ -24,7 +24,7 @@ bibtex: >-
     url = {https://doi.org/10.1109/TWC.2026.3701846}
   }
 selected: true
-image: /assets/img/rydberg-receiver.webp
+image: /assets/img/Rydberg-Rx.jpg
 image_alt: Atomic energy levels and optical interrogation in a Rydberg receiver
 summary: Develops communication-oriented signal and noise models for LO-dressed
   and LO-free Rydberg receivers, then compares their distortion and dynamic
