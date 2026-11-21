@@ -1,17 +1,15 @@
 main:
-- title: Home
-  url: /
-- title: Bio
-  url: /bio/
-- title: Research
-  url: /research/
-- title: Publication
-  url: /publications/
-- title: Project
-  url: /projects/
-- title: Honors
-  url: /honors/
-- title: Professional Services
-  url: /services/
-- title: News
-  url: /news/
+  - title: Home
+    url: /
+  - title: Bio
+    url: /bio/
+  - title: Research
+    url: /research/
+  - title: Publication
+    url: /publications/
+  - title: Honors
+    url: /honors/
+  - title: Professional Services
+    url: /services/
+  - title: News
+    url: /news/
