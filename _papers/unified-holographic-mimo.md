@@ -27,7 +27,7 @@ bibtex: >-
   }
 notes: ESI Highly Cited Paper
 selected: true
-image: /assets/img/holographic-wavenumber.webp
+image: /assets/img/CM2025.jpg
 image_alt: Electromagnetic fields with different wavenumbers
 summary: Uses a wavenumber-domain representation to describe near- and far-field
   propagation in a common framework for holographic arrays.
