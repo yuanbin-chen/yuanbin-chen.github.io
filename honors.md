@@ -8,7 +8,7 @@ activities: true
 ---
 
 {% assign honors = site.data.honors %}
-<h1 id="honors-and-awards">{{ honors.heading | escape }}</h1>
+<h1 id="honors-and-awards" class="page-title">{{ honors.heading | escape }}</h1>
 
 <dl class="academic-timeline">
   {% for honor in honors.items %}

@@ -7,7 +7,7 @@ full_width: true
 ---
 
 {% assign research = site.data.research %}
-<h1 id="research">{{ research.heading | escape }}</h1>
+<h1 id="research" class="page-title">{{ research.heading | escape }}</h1>
 
 {% assign research_topics = site.research_topics | sort: 'order', 'last' %}
 {% for topic in research_topics %}

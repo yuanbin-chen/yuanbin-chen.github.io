@@ -43,7 +43,7 @@ html:not([data-theme="dark"]) .wrapper a:hover {
 
 .academic-profile h1 {
   margin: 0 0 12px;
-  font-size: clamp(42px, 6vw, 62px);
+  font-size: clamp(2.125rem, 6vw, 3.25rem);
   font-weight: 600;
   letter-spacing: -0.035em;
   line-height: 1;
@@ -53,7 +53,7 @@ html:not([data-theme="dark"]) .wrapper a:hover {
   display: inline-block;
   margin-left: 8px;
   font-family: "Noto Serif CJK SC", "Songti SC", SimSun, serif;
-  font-size: 0.41em;
+  font-size: clamp(1.0625rem, 2.5vw, 1.5625rem);
   font-weight: 400;
   letter-spacing: 0;
   vertical-align: 0.15em;
@@ -348,6 +348,10 @@ html[data-theme="dark"] .publications .publication-note-highly-cited {
 
 .research-detail {
   margin: 22px 0 36px;
+}
+
+.research-detail > h2 {
+  font-size: clamp(1.375rem, 3vw, 1.75rem);
 }
 
 .research-detail > p {

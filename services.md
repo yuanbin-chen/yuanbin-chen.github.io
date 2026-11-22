@@ -8,7 +8,7 @@ activities: true
 ---
 
 {% assign services = site.data.services %}
-<h1 id="professional-services">{{ services.heading | escape }}</h1>
+<h1 id="professional-services" class="page-title">{{ services.heading | escape }}</h1>
 
 <div class="academic-activities">
   {% for section in services.sections %}
