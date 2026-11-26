@@ -13,34 +13,20 @@ sections:
 
   - title: Conference Service
     id: conference-service
-    body: >+
+    body: |+
       ### Workshop Chair
 
-
-      - **IEEE PIMRC 2026**. Next-Generation Wireless Communication and Sensing
-      Systems Powered by Quantum Information Technologies.
-
+      - **IEEE PIMRC 2026**. Next-Generation Wireless Communication and Sensing Systems Powered by Quantum Information Technologies.
 
       ### Tutorial Organizer and Presenter
 
-
-      - **IEEE PIMRC 2026**. Rydberg Atomic Quantum Receivers for Future
-      Communication and Sensing: Models, Performance, Applications, and
-      Challenges.
-
-      - **IEEE GLOBECOM 2026**. Rydberg Atomic Quantum Receivers for Future
-      Communication and Sensing.
-
+      - **IEEE PIMRC 2026**. [Rydberg Atomic Quantum Receivers for Future Communication and Sensing: Models, Performance, Applications, and Challenges.](https://pimrc2026.ieee-pimrc.org/tutorials)
+      - **IEEE GLOBECOM 2026**. [Rydberg Atomic Quantum Receivers for Future Communication and Sensing.](https://globecom2026.ieee-globecom.org/events/tut-20-rydberg-atomic-quantum-receivers-future-communication-and-sensing)
 
       ### Technical Program Committee (TPC)
 
-
-      - **IEEE ICC 2027**. Reconfigurable Intelligent Surfaces and
-      Flexible-Antenna Technologies.
-
-      - **IEEE GLOBECOM 2026**. Green Communications Systems and Networks
-      Symposium.
-
+      - **IEEE ICC 2027**. Reconfigurable Intelligent Surfaces and Flexible-Antenna Technologies.
+      - **IEEE GLOBECOM 2026**. Green Communications Systems and Networks Symposium.
       - **IEEE WCNC 2025.** Track 3: Resource Allocation and Machine Learning
 
   - title: Reviewer
